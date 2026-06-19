@@ -1,0 +1,14 @@
+# Add this to avoid committing large files
+*.pth
+*.pkl
+*.h5
+__pycache__/
+*.pyc
+.DS_Store
+data/
+models/
+results/
+.venv/
+.idea/
+.vscode/
+*.egg-info/

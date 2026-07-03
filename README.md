@@ -55,37 +55,6 @@ utsm-proto-telemetry-neural-network/
 
 ---
 
-## The network architecture
-
-The model is a **feed-forward neural network**. There are no recurrent loops or attention heads; data flows in one direction only.
-
-```
-Input layer
-(speed, accel, slope, motor_temp, force, wind) × 200 track positions
-= 1 200 numbers
-        │
-        ▼
-  Linear(1200 → 128) + ReLU     ← "hidden layer 1"
-        │
-        ▼
-  Linear(128 → 64) + ReLU       ← "hidden layer 2"
-        │
-        ▼
-  Linear(64 → 1)                ← single output: predicted energy (Wh)
-```
-
-**ReLU** (Rectified Linear Unit) is just `max(0, x)`. It is a simple gate that lets the network learn non-linear relationships between your inputs and the output, rather than being limited to a straight-line fit.
-
----
-
-## Files in `src/` explained
-
-### `model.py` — data + architecture
-
-Two responsibilities:
-
-- **Loading data:** Reads each `lap{N}_distgrid.csv`, picks the configured feature columns, resamples every lap onto the same number of rows (so all inputs are the same length), and flattens the result into a single vector.
-- **The network:** Defines `LapEnergyNet`, the class that holds the layers described above.
 
 ### `train.py` — the learning loop
 

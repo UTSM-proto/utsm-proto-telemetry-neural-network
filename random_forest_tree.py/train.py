@@ -4,8 +4,7 @@ train.py
 Trains LapEnergyNet on historical lap{N}_distgrid.csv files: feeds each
 lap's flattened telemetry through the network, compares the predicted
 total energy against the actual recorded energy (MSE loss), and runs
-gradient descent to shrink that gap -- this is the "black box" training
-loop you described, made concrete.
+gradient descent to shrink that gap.
 
 Usage (from the project root):
     python -m src.train --data-dir data --epochs 200 --val-frac 0.2
@@ -48,7 +47,6 @@ def train_model(
 
     train_ids, val_ids = split_lap_ids(data_dir, val_frac=val_frac, seed=seed)
     train_ds = LapDistGridDataset(data_dir, lap_ids=train_ids)
-    # standardize val data using TRAIN statistics, not its own
     val_ds = LapDistGridDataset(
         data_dir, lap_ids=val_ids,
         feature_mean=train_ds.feature_mean, feature_std=train_ds.feature_std,

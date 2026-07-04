@@ -1,22 +1,30 @@
 """
 train.py
 --------
-Trains LapEnergyNet on historical lap{N}_distgrid.csv files: feeds each
-lap's flattened telemetry through the network, compares the predicted
-total energy against the actual recorded energy (MSE loss), and runs
-gradient descent to shrink that gap.
+Trains a RandomForestRegressor on historical lap{N}_distgrid.csv files.
+
+Unlike the previous neural-network version there are no epochs or a
+learning rate -- scikit-learn builds all the trees in a single fit()
+call. Training is fast even on small datasets and does not require a
+GPU.
+
+After fitting, the model is saved to results/best_model.joblib using
+joblib (scikit-learn's recommended serialisation format). Training
+metrics (MAE, MSE, R²) are printed for both the training and validation
+splits, and a compact results/train_results.json is written for later
+reference.
 
 Usage (from the project root):
-    python -m src.train --data-dir data --epochs 200 --val-frac 0.2
+    python -m src.train --data-dir data --val-frac 0.2
 """
 
 import argparse
 import json
 from pathlib import Path
 
+import joblib
 import numpy as np
-import torch
-from torch.utils.data import DataLoader
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 from .model import LapDistGridDataset, build_model, discover_lap_files
 
@@ -31,92 +39,83 @@ def split_lap_ids(data_dir, val_frac=0.2, seed=42):
     return laps[n_val:], laps[:n_val]  # train_ids, val_ids
 
 
+def _metrics(y_true, y_pred, label):
+    mae  = mean_absolute_error(y_true, y_pred)
+    mse  = mean_squared_error(y_true, y_pred)
+    r2   = r2_score(y_true, y_pred)
+    print(f"  {label:10s}  MAE={mae:.4f}  MSE={mse:.4f}  R²={r2:.4f}")
+    return {"mae": mae, "mse": mse, "r2": r2}
+
+
 def train_model(
     data_dir="data",
     results_dir="results",
-    epochs=200,
-    lr=1e-3,
-    batch_size=8,
     val_frac=0.2,
-    hidden_dims=(128, 64),
+    n_estimators=200,
+    max_depth=None,
+    min_samples_leaf=1,
     seed=42,
 ):
-    torch.manual_seed(seed)
     results_dir = Path(results_dir)
     results_dir.mkdir(parents=True, exist_ok=True)
 
     train_ids, val_ids = split_lap_ids(data_dir, val_frac=val_frac, seed=seed)
+    print(f"Laps: {len(train_ids)} train, {len(val_ids)} val")
+
     train_ds = LapDistGridDataset(data_dir, lap_ids=train_ids)
-    val_ds = LapDistGridDataset(
-        data_dir, lap_ids=val_ids,
-        feature_mean=train_ds.feature_mean, feature_std=train_ds.feature_std,
+    val_ds   = LapDistGridDataset(data_dir, lap_ids=val_ids)
+
+    model = build_model(
+        n_estimators=n_estimators,
+        max_depth=max_depth,
+        min_samples_leaf=min_samples_leaf,
+        seed=seed,
     )
 
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False)
+    print(f"\nFitting RandomForestRegressor ({n_estimators} trees)...")
+    model.fit(train_ds.X, train_ds.y)
 
-    model = build_model(train_ds.input_dim, hidden_dims=hidden_dims)
-    criterion = torch.nn.MSELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    print("\nPerformance:")
+    train_m = _metrics(train_ds.y, model.predict(train_ds.X), "Train")
+    val_m   = _metrics(val_ds.y,   model.predict(val_ds.X),   "Val")
+    print(f"  OOB R²  : {model.oob_score_:.4f}  "
+          f"(free estimate using out-of-bag samples)")
 
-    history = {"train_loss": [], "val_loss": []}
-    best_val = float("inf")
+    out = {
+        "n_train": len(train_ids), "n_val": len(val_ids),
+        "train_lap_ids": train_ids, "val_lap_ids": val_ids,
+        "n_estimators": n_estimators,
+        "max_depth": max_depth,
+        "min_samples_leaf": min_samples_leaf,
+        "oob_r2": model.oob_score_,
+        "train": train_m, "val": val_m,
+        "feature_names": train_ds.feature_names,
+        "feature_importances": model.feature_importances_.tolist(),
+    }
+    with open(results_dir / "train_results.json", "w") as f:
+        json.dump(out, f, indent=2)
 
-    for epoch in range(1, epochs + 1):
-        model.train()
-        running = 0.0
-        for X, y in train_loader:
-            optimizer.zero_grad()
-            pred = model(X)
-            loss = criterion(pred, y)
-            loss.backward()
-            optimizer.step()
-            running += loss.item() * X.size(0)
-        train_loss = running / len(train_ds)
+    model_path = results_dir / "best_model.joblib"
+    joblib.dump(model, model_path)
+    print(f"\nSaved model to {model_path}")
 
-        model.eval()
-        running = 0.0
-        with torch.no_grad():
-            for X, y in val_loader:
-                pred = model(X)
-                running += criterion(pred, y).item() * X.size(0)
-        val_loss = running / len(val_ds)
-
-        history["train_loss"].append(train_loss)
-        history["val_loss"].append(val_loss)
-
-        if val_loss < best_val:
-            best_val = val_loss
-            torch.save(
-                {
-                    "model_state": model.state_dict(),
-                    "input_dim": train_ds.input_dim,
-                    "hidden_dims": hidden_dims,
-                    "feature_mean": train_ds.feature_mean,
-                    "feature_std": train_ds.feature_std,
-                },
-                results_dir / "best_model.pt",
-            )
-
-        if epoch == 1 or epoch % max(1, epochs // 20) == 0 or epoch == epochs:
-            print(f"epoch {epoch:4d}/{epochs}  train_mse={train_loss:.4f}  val_mse={val_loss:.4f}")
-
-    with open(results_dir / "train_history.json", "w") as f:
-        json.dump(history, f, indent=2)
-
-    print(f"\nBest val MSE: {best_val:.4f}")
-    print(f"Saved best model to {results_dir / 'best_model.pt'}")
-    return model, history
+    return model, out
 
 
 def _parse_args():
-    p = argparse.ArgumentParser(description="Train the lap energy prediction network.")
-    p.add_argument("--data-dir", default="data")
-    p.add_argument("--results-dir", default="results")
-    p.add_argument("--epochs", type=int, default=200)
-    p.add_argument("--lr", type=float, default=1e-3)
-    p.add_argument("--batch-size", type=int, default=8)
-    p.add_argument("--val-frac", type=float, default=0.2)
+    p = argparse.ArgumentParser(
+        description="Train the Random Forest lap energy model."
+    )
+    p.add_argument("--data-dir",          default="data")
+    p.add_argument("--results-dir",       default="results")
+    p.add_argument("--val-frac",          type=float, default=0.2)
+    p.add_argument("--n-estimators",      type=int,   default=200,
+                   help="Number of trees in the forest.")
+    p.add_argument("--max-depth",         type=int,   default=None,
+                   help="Max tree depth. Omit to grow fully (may overfit on small datasets).")
+    p.add_argument("--min-samples-leaf",  type=int,   default=1,
+                   help="Min samples per leaf. Raise to 3-5 to regularise on small datasets.")
+    p.add_argument("--seed",              type=int,   default=42)
     return p.parse_args()
 
 
@@ -125,8 +124,9 @@ if __name__ == "__main__":
     train_model(
         data_dir=args.data_dir,
         results_dir=args.results_dir,
-        epochs=args.epochs,
-        lr=args.lr,
-        batch_size=args.batch_size,
         val_frac=args.val_frac,
+        n_estimators=args.n_estimators,
+        max_depth=args.max_depth,
+        min_samples_leaf=args.min_samples_leaf,
+        seed=args.seed,
     )

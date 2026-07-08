@@ -26,10 +26,8 @@ input vector, with no resampling needed. Feature importances then read
 naturally: "mean speed matters more than max motor temperature."
 
 ------------------------------------------------------------------------
-ASSUMPTIONS -- check these against your real distgrid.csv output
+ASSUMPTIONS -- check these against real distgrid.csv output
 ------------------------------------------------------------------------
-Everything you need to change lives in the CONFIG block below.
-
   * FEATURE_COLUMNS -- the per-track-position columns to summarise.
   * STAT_FUNCTIONS  -- which statistics to compute per column.
                        Default: mean, max, min, std (4 stats × 6 cols
@@ -49,7 +47,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 # --------------------------------------------------------------------------
-# 1) CONFIG -- edit to match your actual lap{N}_distgrid.csv columns
+# 1) CONFIG -- edit to match actual lap{N}_distgrid.csv columns
 # --------------------------------------------------------------------------
 
 FEATURE_COLUMNS = [

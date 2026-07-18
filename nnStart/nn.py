@@ -39,7 +39,12 @@ class TelemetryStrategyNet(nn.Module):
 # ==========================================
 # 2. GENERATE MOCK CSV (IF REAL ONE IS MISSING)
 # ==========================================
-csv_filename = 'telemetry_001.csv'
+
+# finding the exact path between where this Python script is located and where the telemtry_dumps/telemetry_001.csv file is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_filename = os.path.join(script_dir, '..', 'telemetry_dumps', 'telemetry_001.csv')
+# create telemetry_dumps directory if it does not exist
+os.makedirs(os.path.dirname(csv_filename), exist_ok=True)
 
 if not os.path.exists(csv_filename):
     print(f"'{csv_filename}' not found. Generating a dummy CSV for testing...")
@@ -60,6 +65,13 @@ if not os.path.exists(csv_filename):
 # ==========================================
 print("Loading data from CSV...")
 df = pd.read_csv(csv_filename)
+
+# If the real CSV doesn't have the answer key, generate dummy answers 
+# so the neural network math doesn't crash.
+if 'target_strategy' not in df.columns:
+    print("\n[WARNING]: 'target_strategy' column not found in CSV.")
+    print("Generating a dummy target column so training can proceed...\n")
+    df['target_strategy'] = np.random.uniform(0, 1, len(df))
 
 # Define our exact input features
 feature_columns = [

@@ -61,26 +61,47 @@ if not os.path.exists(csv_filename):
     pd.DataFrame(mock_data).to_csv(csv_filename, index=False)
 
 # ==========================================
-# 3. LOAD AND PREPROCESS CSV DATA
+# 3. LOAD, CLEAN, AND PREPROCESS CSV DATA (Incorporating Sandbox Logic)
+# TODO: compute input consumption (how much energy is used per second, in Watts/second)
 # ==========================================
 print("Loading data from CSV...")
 df = pd.read_csv(csv_filename)
 
-# If the real CSV doesn't have the answer key, generate dummy answers 
-# so the neural network math doesn't crash.
+# a. Forward-fill any missing sensor data (From Sandbox #1)
+df.ffill(inplace=True)
+
+# b. Calculate parameters that is not be computed by hardware
+    # b.i Power (From Sandbox concept #1)
+        # TODO: Determine how hardware data is presented - currently assumes voltage and curent are in mV and mA, so divide by 1,000,000 to get Watts
+df['power_watts'] = (df['voltage_mV'] * df['current_mA']) / 1000000.0
+
+    # b.ii Elaspsed time: subtract the very first timestamp from every timestamp
+        # (Divide by 1000 to convert milliseconds to seconds)
+first_timestamp = df['timestamp_ms'].iloc[0]
+df['elapsed_time_s'] = (df['timestamp_ms'] - first_timestamp) / 1000.0
+
+    # b.iii: Delta0time: subtract the previous row's timestamp from the current row
+        # df['timestamp_ms'].diff() automatically does (Row_N - Row_N-1)
+df['delta_time_s'] = df['timestamp_ms'].diff() / 1000.0
+        # The very first row will have a NaN delta-time (since there is no previous row). Fill it with 0.
+df['delta_time_s'] = df['delta_time_s'].fillna(0)
+    # b.iv Energy consumption (Joules): Power (Watts) * Delta-Time (seconds)
+df['energy_consumed_joules'] = df['power_watts'] * df['delta_time_s']
+
+# c. Generate dummy answers if missing
 if 'target_strategy' not in df.columns:
     print("\n[WARNING]: 'target_strategy' column not found in CSV.")
     print("Generating a dummy target column so training can proceed...\n")
     df['target_strategy'] = np.random.uniform(0, 1, len(df))
 
-# Define our exact input features
+# d. define exact input features
 feature_columns = [
-    'timestamp_ms', 'current_mA', 'voltage_mV', 
+    'elapsed_time_s', 'current_mA', 'voltage_mV', 'power_watts', 'energy_consumed_joules',
     'ax_x100', 'ay_x100', 'az_x100', 'amag_x100'
 ]
 
 # Extract the raw inputs (X) and the target we want to predict (y)
-# *Note: Ensure your actual CSV has a column for the target strategy!
+# TODO: ensure actual CSV has a column for the target strategy
 X_raw = df[feature_columns].values
 y_raw = df['target_strategy'].values
 
@@ -95,8 +116,8 @@ y_train = torch.tensor(y_raw, dtype=torch.float32).view(-1, 1) # Reshape to a co
 # ==========================================
 # 4. SETUP HYPERPARAMETERS
 # ==========================================
-# Let's assume your static feature vector has 7 variables
-INPUT_FEATURES = 7  
+# assume static feature vector has 8 variables: 'elapsed_time_s', 'current_mA', 'voltage_mV', 'power_watts', 'energy_consumed_joules', 'ax_x100', 'ay_x100', 'az_x100', 'amag_x100' --> = revised columns of data from telemetry_dumps + power + energy consumed
+INPUT_FEATURES = 9
 # Let's assume 'strategy' is a single continuous value (e.g., Target Throttle %)
 OUTPUT_FEATURES = 1 
 HIDDEN_NEURONS = 32
@@ -142,7 +163,8 @@ print("Training complete. The network is ready to make predictions.")
 # 6. MAKE A PREDICTION ON NEW DATA
 # ==========================================
 # Imagine a new line of telemetry just came in via CAN bus/serial
-new_telemetry_raw = np.array([[102000, 2500, 11800, 50, -10, -990, 1005]])
+# Order must match: [elapsed_time, current, voltage, power, energy, ax, ay, az, amag]
+new_telemetry_raw = np.array([[102.0, 2500, 11800, 29.5, 1.47, 50, -10, -990, 1005]])
 
 # We MUST scale the new data using the EXACT SAME scaler we used for training
 new_telemetry_scaled = scaler.transform(new_telemetry_raw)

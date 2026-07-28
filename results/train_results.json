@@ -1,0 +1,78 @@
+{
+  "n_train": 3,
+  "n_val": 1,
+  "train_lap_ids": [
+    3,
+    2,
+    1
+  ],
+  "val_lap_ids": [
+    4
+  ],
+  "n_estimators": 200,
+  "max_depth": null,
+  "min_samples_leaf": 1,
+  "oob_r2": -0.8136084327307427,
+  "train": {
+    "mae": 0.4458386198679604,
+    "mse": 0.25040032165745063,
+    "r2": 0.8700810869052203
+  },
+  "val": {
+    "mae": 9.795888137817382,
+    "mse": 95.95942440863129,
+    "r2": NaN
+  },
+  "feature_names": [
+    "speed_kph_mean",
+    "speed_kph_max",
+    "speed_kph_min",
+    "speed_kph_std",
+    "accel_m_s2_mean",
+    "accel_m_s2_max",
+    "accel_m_s2_min",
+    "accel_m_s2_std",
+    "grade_pct_mean",
+    "grade_pct_max",
+    "grade_pct_min",
+    "grade_pct_std",
+    "imu_total_g_mean",
+    "imu_total_g_max",
+    "imu_total_g_min",
+    "imu_total_g_std",
+    "power_w_mean",
+    "power_w_max",
+    "power_w_min",
+    "power_w_std",
+    "current_mA_mean",
+    "current_mA_max",
+    "current_mA_min",
+    "current_mA_std"
+  ],
+  "feature_importances": [
+    0.028414471530377926,
+    0.02841985215166494,
+    0.06248385813613895,
+    0.034101670333483124,
+    0.04544916483325844,
+    0.062489238757425965,
+    0.0568128011968948,
+    0.045470687318406505,
+    0.02274879521242079,
+    0.0,
+    0.06250538062128702,
+    0.034101670333483124,
+    0.045454545454545456,
+    0.04544378421197142,
+    0.022727272727272728,
+    0.04543302296939739,
+    0.05680203995432077,
+    0.051125602393789604,
+    0.03976734665144026,
+    0.03410705095477014,
+    0.04545992607583247,
+    0.062494619378712986,
+    0.022727272727272728,
+    0.04545992607583247
+  ]
+}

@@ -72,35 +72,26 @@ FILENAME_PATTERN = re.compile(r"lap(\d+).*\.csv$", re.IGNORECASE)
 # --------------------------------------------------------------------------
 
 def discover_lap_files(data_dir):
-    """Find every lap{N}_distgrid.csv in data_dir.
-    Returns [(lap_id, Path), ...] sorted by lap_id."""
     data_dir = Path(data_dir)
     laps = []
-    for path in data_dir.glob("*distgrid.csv"):
+    for path in data_dir.glob("*.csv"):
         m = FILENAME_PATTERN.search(path.name)
         if m:
             laps.append((int(m.group(1)), path))
     laps.sort(key=lambda x: x[0])
     return laps
 
-
-def feature_names():
-    """Return the ordered list of feature names for the input vector.
-    e.g. ["speed_m_s_mean", "speed_m_s_max", ..., "cum_energy_wh_std"]
-    Used by evaluate.py to label the feature importance chart."""
-    return [f"{col}_{stat}" for col in FEATURE_COLUMNS for stat in STAT_FUNCTIONS]
-
-
 def load_lap_features(path, feature_columns=None):
     feature_columns = feature_columns or FEATURE_COLUMNS
-    df = pd.read_csv(path, engine="python", on_bad_lines="skip")
+    df = pd.read_csv(path, encoding="utf-8-sig", engine="python", on_bad_lines="skip")
 
-    # Clean up weird numeric columns
     for c in feature_columns:
         if c in df.columns:
             df[c] = pd.to_numeric(df[c], errors="coerce")
 
     df = df.dropna(subset=feature_columns)
+    if df.empty:
+        raise ValueError(f"{path}: no valid feature rows after cleaning")
 
     stats = []
     for col in feature_columns:
@@ -114,9 +105,6 @@ def load_lap_features(path, feature_columns=None):
                 stats.append(series.min())
             elif stat == "std":
                 stats.append(series.std())
-            else:
-                raise ValueError(f"Unknown stat function: {stat!r}")
-
     return np.array(stats, dtype=np.float32)
 
 

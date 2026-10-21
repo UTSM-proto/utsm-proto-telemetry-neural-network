@@ -47,29 +47,24 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 # --------------------------------------------------------------------------
-# 1) CONFIG -- edit to match actual lap{N}_distgrid.csv columns
+# 1) CONFIG 
 # --------------------------------------------------------------------------
 
 FEATURE_COLUMNS = [
-    "speed_m_s",              # speed in m/s
-    "accel_m_s2",             # acceleration in m/s^2
-    "grade_pct",              # grade/slope in percent
-    "imu_total_g",            # total acceleration in g
-    "power_w",                # power in watts
-    "cum_energy_wh",          # cumulative energy (for normalization/context)
+    "throttle",              
+    "speed",             
+    "rpm",              
+    "current",            
+    "voltage",                
+             
 ]
 
-# Statistics computed per column to form the fixed-length input vector.
-# Adding or removing entries here changes the input dimension automatically.
 STAT_FUNCTIONS = ["mean", "max", "min", "std"]
 
-# How to obtain the regression target (actual total lap energy).
-# One of: "cumulative_column", "sum_column", "labels_file"
-TARGET_MODE = "cumulative_column"
-TARGET_COLUMN = "cum_energy_wh"  # last value = total lap energy
+TARGET_MODE = "labels_file"
+LABELS_FILE = "lap_labels.csv"
 
-# Filename pattern produced by the pre-processing script
-FILENAME_PATTERN = re.compile(r"lap(\d+)_distgrid\.csv$", re.IGNORECASE)
+FILENAME_PATTERN = re.compile(r"lap(\d+).*\.csv$", re.IGNORECASE)
 
 
 # --------------------------------------------------------------------------
@@ -97,22 +92,15 @@ def feature_names():
 
 
 def load_lap_features(path, feature_columns=None):
-    """Load one lap{N}_distgrid.csv -> fixed-length stats vector.
-
-    For each column in FEATURE_COLUMNS, computes mean / max / min / std
-    across all rows in the lap. The result is always the same length
-    regardless of how many rows the lap CSV has.
-    """
     feature_columns = feature_columns or FEATURE_COLUMNS
-    df = pd.read_csv(path)
+    df = pd.read_csv(path, engine="python", on_bad_lines="skip")
 
-    missing = [c for c in feature_columns if c not in df.columns]
-    if missing:
-        raise ValueError(
-            f"{path.name}: missing expected columns {missing}. "
-            f"Update FEATURE_COLUMNS in model.py to match your distgrid output. "
-            f"Columns found: {list(df.columns)}"
-        )
+    # Clean up weird numeric columns
+    for c in feature_columns:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+
+    df = df.dropna(subset=feature_columns)
 
     stats = []
     for col in feature_columns:
@@ -133,7 +121,6 @@ def load_lap_features(path, feature_columns=None):
 
 
 def load_lap_target(lap_id, path, data_dir):
-    """Resolve the regression target (actual total lap energy) given TARGET_MODE."""
     if TARGET_MODE in ("cumulative_column", "sum_column"):
         df = pd.read_csv(path)
         if TARGET_COLUMN not in df.columns:

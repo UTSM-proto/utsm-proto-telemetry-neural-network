@@ -92,14 +92,14 @@ print('Fresh-process scientific import and binary checks passed.')
                           text=True, capture_output=True)
 
 
-def ensure_environment(requirements_path):
+def ensure_environment(requirements_path, validate_active_kernel=True):
     if not (3, 10) <= sys.version_info[:2] <= (3, 13):
         raise RuntimeError("This pinned notebook supports Python 3.10-3.13; choose a supported Colab runtime.")
     path = Path(requirements_path)
     pins = parse_pins(path.read_text(encoding="utf-8"))
     before = installed_versions(pins)
     # Check sys.modules only; never import a binary package before installation.
-    loaded = loaded_versions(pins)
+    loaded = loaded_versions(pins) if validate_active_kernel else {}
     command = [sys.executable, "-m", "pip", "install", "--upgrade", "--only-binary=:all:",
                "--no-cache-dir", "-r", str(path)]
     changed = before != pins
@@ -120,10 +120,13 @@ def ensure_environment(requirements_path):
     after = installed_versions(pins)
     if after != pins:
         raise RuntimeError("Installed versions do not match the notebook pins: " + str(after))
-    if requires_restart(pins, before, after, loaded, repaired):
+    if validate_active_kernel and requires_restart(pins, before, after, loaded, repaired):
         raise RuntimeError(RESTART_MESSAGE)
     # Catch partially loaded NumPy internals even if __version__ appears correct.
-    validate_kernel(pins)
+    if validate_active_kernel:
+        validate_kernel(pins)
+    else:
+        print("Worker environment ready. Notebook scientific libraries will not be imported or restarted.")
     print(probe.stdout.strip())
     print("Python:", sys.version.split()[0])
     print("Ready:", json.dumps(after, sort_keys=True))

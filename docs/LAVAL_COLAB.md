@@ -10,10 +10,10 @@ Upload `notebooks/retrain_laval.ipynb` to [Google Colab](https://colab.research.
 - Development-only fitted models, feature schema, held-out predictions/metrics, chart, HTML report, environment record and a downloadable result ZIP.
 - A model-reload prediction example. Optionally copy results to your Google Drive.
 
-## Recover from NumPy dtype/binary errors
-If an older notebook failed with `numpy.dtype size changed`, reopen the updated notebook from this branch. In Colab, disconnect and delete the old runtime (or restart the session), then Run all from the dependency cell. Do not reuse the old NumPy 1.26 dependency cell on Python 3.13.
+## Recovery from Colab restart loops
+Open the latest notebook from this branch and Run all. No session restart is required: all data preparation, training and inference run in fresh Python processes (python -I). The notebook kernel only uploads data and displays CSV/JSON/PNG results; it never imports NumPy, pandas, scikit-learn or joblib. Scientific modules preloaded by Colab are ignored.
 
-The new setup installs Python 3.13-compatible binary wheels, checks all scientific imports in a fresh process, and checks the active kernel before loading the training helper. If packages changed while NumPy/pandas were already loaded, it stops and asks for **Runtime > Restart session**, then **Run all**. A restart is necessary to unload old C extensions; retrying only the failing cell cannot fix that.
+Package versions and compiled imports are checked in a fresh process before training. The notebook embeds both the helper and worker, so it still requires only one notebook upload. This avoids the earlier active-kernel version check that could keep asking for restarts when Colab preloaded different versions.
 
 The source reference comes from telemetry commit `00a27b6d25cd143354b17170f522a6a44aaa7b01`, file `data/tracks/autodrome-chaudiere/autodrome-chaudiere-model.json`. It was fitted to 15 Front Campus laps. This workflow trains the new models **on the Laval archive**; it does not silently pool the old Front Campus training data into Laval's development split.
 

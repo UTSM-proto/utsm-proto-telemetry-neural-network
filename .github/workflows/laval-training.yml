@@ -4,6 +4,7 @@ on:
     paths:
       - "laval_training.py"
       - "colab_environment.py"
+      - "laval_notebook_worker.py"
       - "tools/build_laval_notebook.py"
       - "notebooks/retrain_laval.ipynb"
       - "tests/test_laval*.py"
@@ -15,6 +16,7 @@ on:
     paths:
       - "laval_training.py"
       - "colab_environment.py"
+      - "laval_notebook_worker.py"
       - "tools/build_laval_notebook.py"
       - "notebooks/retrain_laval.ipynb"
       - "tests/test_laval*.py"

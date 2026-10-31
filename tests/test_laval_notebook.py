@@ -24,6 +24,7 @@ class NotebookTests(unittest.TestCase):
                     for target in node.targets:
                         if isinstance(target, ast.Name):
                             assignments[target.id] = node.value.value
+        self.assertEqual(assignments["BUNDLED_WORKER_SOURCE"], (ROOT/"laval_notebook_worker.py").read_text(encoding="utf-8"))
         self.assertEqual(assignments["BUNDLED_ENVIRONMENT_SOURCE"], (ROOT/"colab_environment.py").read_text(encoding="utf-8"))
         source = (ROOT/"laval_training.py").read_text(encoding="utf-8")
         self.assertEqual(assignments["BUNDLED_TRAINING_SOURCE"], source)

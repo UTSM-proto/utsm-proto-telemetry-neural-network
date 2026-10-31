@@ -1,4 +1,4 @@
-# Add this to avoid committing large files
+# Generated models and telemetry archives
 *.pth
 *.pkl
 *.h5
@@ -12,3 +12,5 @@ results/
 .idea/
 .vscode/
 *.egg-info/
+outputs/
+.ipynb_checkpoints/

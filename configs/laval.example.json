@@ -1,0 +1,25 @@
+{
+  "current_mode": "magnitude",
+  "current_scale": 1,
+  "current_zero_mA": 0,
+  "calibration_confirmed": false,
+  "calibration_overrides": {},
+  "test_dates": [
+    "2026-09-20"
+  ],
+  "max_gap_s": 2,
+  "min_speed_kph": 2,
+  "max_speed_kph": 60,
+  "max_abs_accel_m_s2": 4,
+  "max_abs_current_mA": 60000,
+  "max_hdop": 3,
+  "max_speed_disagreement_kph": 10,
+  "min_session_rows": 50,
+  "min_session_duration_s": 20,
+  "window_seconds": 10,
+  "min_window_duration_s": 5,
+  "n_estimators": 200,
+  "n_jobs": 2,
+  "seed": 42,
+  "refit_all_for_release": false
+}

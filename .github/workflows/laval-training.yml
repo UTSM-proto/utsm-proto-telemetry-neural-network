@@ -1,0 +1,42 @@
+name: Laval training checks
+on:
+  pull_request:
+    paths:
+      - "laval_training.py"
+      - "colab_environment.py"
+      - "laval_notebook_worker.py"
+      - "tools/build_laval_notebook.py"
+      - "notebooks/retrain_laval.ipynb"
+      - "tests/test_laval*.py"
+      - "requirements-colab.txt"
+      - "configs/**"
+      - ".github/workflows/laval-training.yml"
+  push:
+    branches: [main]
+    paths:
+      - "laval_training.py"
+      - "colab_environment.py"
+      - "laval_notebook_worker.py"
+      - "tools/build_laval_notebook.py"
+      - "notebooks/retrain_laval.ipynb"
+      - "tests/test_laval*.py"
+      - "requirements-colab.txt"
+      - "configs/**"
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-colab.txt
+      - run: python -m pip install -r requirements-colab.txt
+      - run: python -m unittest discover -s tests -p 'test_laval*.py' -v

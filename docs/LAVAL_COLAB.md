@@ -1,6 +1,6 @@
 # Retrain on Laval in Colab
 
-Upload `notebooks/retrain_laval.ipynb` to [Google Colab](https://colab.research.google.com/), select a **CPU runtime**, and run the cells in order (or Run all). When prompted, upload **Laval All Telem.zip** from your computer. The notebook embeds a checksum-verified copy of the training helper, frozen analytical reference and dependency list; it does not download source code. The notebook itself is the only file you need to upload.
+Upload `notebooks/retrain_laval.ipynb` to [Google Colab](https://colab.research.google.com/), select a **CPU runtime** with Python 3.10-3.13, and run the cells in order (or Run all). When prompted, upload **Laval All Telem.zip** from your computer. The notebook embeds a checksum-verified copy of the training helper, frozen analytical reference and dependency list; it does not download source code. The notebook itself is the only file you need to upload.
 
 ## What you get
 - Archive/file hashes, per-file quality/exclusion counts and a canonical interval dataset.
@@ -9,6 +9,11 @@ Upload `notebooks/retrain_laval.ipynb` to [Google Colab](https://colab.research.
 - Comparison with a matched-data analytical regression refit **and the frozen Front Campus analytical model**.
 - Development-only fitted models, feature schema, held-out predictions/metrics, chart, HTML report, environment record and a downloadable result ZIP.
 - A model-reload prediction example. Optionally copy results to your Google Drive.
+
+## Recover from NumPy dtype/binary errors
+If an older notebook failed with `numpy.dtype size changed`, reopen the updated notebook from this branch. In Colab, disconnect and delete the old runtime (or restart the session), then Run all from the dependency cell. Do not reuse the old NumPy 1.26 dependency cell on Python 3.13.
+
+The new setup installs Python 3.13-compatible binary wheels, checks all scientific imports in a fresh process, and checks the active kernel before loading the training helper. If packages changed while NumPy/pandas were already loaded, it stops and asks for **Runtime > Restart session**, then **Run all**. A restart is necessary to unload old C extensions; retrying only the failing cell cannot fix that.
 
 The source reference comes from telemetry commit `00a27b6d25cd143354b17170f522a6a44aaa7b01`, file `data/tracks/autodrome-chaudiere/autodrome-chaudiere-model.json`. It was fitted to 15 Front Campus laps. This workflow trains the new models **on the Laval archive**; it does not silently pool the old Front Campus training data into Laval's development split.
 

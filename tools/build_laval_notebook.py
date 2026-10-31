@@ -11,6 +11,7 @@ def build():
     requirements = (ROOT / "requirements-colab.txt").read_text(encoding="utf-8")
     reference = (ROOT / "configs/front_campus_reference.json").read_text(encoding="utf-8")
     source_hash = hashlib.sha256(source.encode()).hexdigest()
+    environment_source = (ROOT / "colab_environment.py").read_text(encoding="utf-8")
     cells = []
 
     def md(text):
@@ -33,24 +34,37 @@ compares against analytical models, and downloads the complete result bundle.
 The forest is not assumed to improve on the analytical model. Read the report before choosing a model.
 """)
     md("""## 1. Install the pinned CPU environment
-Run this first in a fresh runtime. If Colab reports that an imported package changed, restart the runtime and Run all again.
+Run this first. The pinned NumPy 2 / pandas stack supports Python 3.10-3.13.
+The cell checks scientific imports in a separate process and then the active kernel.
+**If it asks for a restart, choose Runtime > Restart session, then Run all again.**
+Rerunning only the model-loading cell cannot replace old NumPy binaries in memory.
 No GPU is required for the forest or analytical model.
 """)
-    code("import os, sys, subprocess\n"
+    code("DEPENDENCIES_READY = False\n"
+         + "import os, sys, subprocess, importlib.util\n"
          + "from pathlib import Path\n"
          + "REQUIREMENTS = " + repr(requirements) + "\n"
+         + "BUNDLED_ENVIRONMENT_SOURCE = " + repr(environment_source) + "\n"
          + "IN_COLAB = 'google.colab' in sys.modules or Path('/content').is_dir()\n"
          + "WORK_DIR = Path(os.environ.get('UTSM_WORK_DIR', '/content/utsm-laval' if IN_COLAB else 'laval-runtime')).resolve()\n"
          + "WORK_DIR.mkdir(parents=True, exist_ok=True)\n"
          + "(WORK_DIR / 'requirements-colab.txt').write_text(REQUIREMENTS, encoding='utf-8')\n"
-         + "if os.environ.get('UTSM_SKIP_INSTALL') != '1':\n"
-         + "    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-q', '-r', str(WORK_DIR / 'requirements-colab.txt')])\n"
+         + "environment_path = WORK_DIR / 'colab_environment.py'\n"
+         + "environment_path.write_text(BUNDLED_ENVIRONMENT_SOURCE, encoding='utf-8')\n"
+         + "env_spec = importlib.util.spec_from_file_location('utsm_colab_environment', environment_path)\n"
+         + "environment = importlib.util.module_from_spec(env_spec)\n"
+         + "sys.modules[env_spec.name] = environment\n"
+         + "env_spec.loader.exec_module(environment)\n"
+         + "environment.ensure_environment(WORK_DIR / 'requirements-colab.txt')\n"
+         + "DEPENDENCIES_READY = True\n"
          + "print('Workspace:', WORK_DIR)\n")
     md("""## 2. Load the bundled, versioned implementation
 This cell writes only the helper and frozen analytical reference into the runtime workspace.
 It does not download source code. The SHA-256 check catches an accidental mismatch in the embedded helper.
 """)
-    code("import hashlib, importlib.util, json\n"
+    code("if not globals().get('DEPENDENCIES_READY', False):\n"
+         + "    raise RuntimeError('Run the dependency cell successfully first. If prompted, restart the session and Run all.')\n"
+         + "import hashlib, importlib.util, json\n"
          + "BUNDLED_TRAINING_SOURCE = " + repr(source) + "\n"
          + "BUNDLED_SOURCE_SHA256 = " + repr(source_hash) + "\n"
          + "FRONT_CAMPUS_REFERENCE_JSON = " + repr(reference) + "\n"
@@ -228,7 +242,7 @@ helper, analytical reference and requirements match the reviewed source files.
     notebook = {
         "nbformat": 4, "nbformat_minor": 5,
         "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
-                     "language_info": {"name": "python", "version": "3.11"},
+                     "language_info": {"name": "python", "version": "3.13"},
                      "colab": {"name": "retrain_laval.ipynb", "provenance": []},
                      "utsm_training_source_sha256": source_hash},
         "cells": cells,

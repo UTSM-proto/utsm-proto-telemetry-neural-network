@@ -1,0 +1,3792 @@
+{
+  "baselines": {
+    "signed_force_default_parameters": {
+      "absolute_error_wh": 17.048345089718328,
+      "signed_error_wh": -0.9097330596919608,
+      "absolute_error_pct": 56.419676525347256,
+      "interval_mae_w": 148.29771688231227,
+      "by_track": {
+        "Front Campus": {
+          "absolute_error_wh": 12.6152182170662,
+          "signed_error_wh": -12.6152182170662,
+          "absolute_error_pct": 43.24007630222048
+        },
+        "Indianapolis": {
+          "absolute_error_wh": 24.20791804503955,
+          "signed_error_wh": 24.20791804503955,
+          "absolute_error_pct": 53.97428349281245
+        },
+        "Laval": {
+          "absolute_error_wh": 14.32189900704923,
+          "signed_error_wh": -14.32189900704923,
+          "absolute_error_pct": 72.04466978100885
+        }
+      },
+      "runs": [
+        {
+          "track": "Front Campus",
+          "run": "front-campus-2026-08-06-run-03-telemetry",
+          "measured_wh": 29.17482876046261,
+          "predicted_wh": 16.55961054339641,
+          "seconds": 621.945,
+          "signed_error_wh": -12.6152182170662,
+          "absolute_error_wh": 12.6152182170662,
+          "absolute_error_pct": 43.24007630222048
+        },
+        {
+          "track": "Indianapolis",
+          "run": "telemetry_20260411_122713",
+          "measured_wh": 44.85083724782234,
+          "predicted_wh": 69.05875529286189,
+          "seconds": 1989.778,
+          "signed_error_wh": 24.20791804503955,
+          "absolute_error_wh": 24.20791804503955,
+          "absolute_error_pct": 53.97428349281245
+        },
+        {
+          "track": "Laval",
+          "run": "2026-09-20-14-00",
+          "measured_wh": 19.879193076438415,
+          "predicted_wh": 5.557294069389185,
+          "seconds": 211.69200000000055,
+          "signed_error_wh": -14.32189900704923,
+          "absolute_error_wh": 14.32189900704923,
+          "absolute_error_pct": 72.04466978100885
+        }
+      ]
+    },
+    "signed_force_capstone_parameters": {
+      "absolute_error_wh": 12.586688769709477,
+      "signed_error_wh": -8.758053395524447,
+      "absolute_error_pct": 49.54190606597916,
+      "interval_mae_w": 141.57163832801524,
+      "by_track": {
+        "Front Campus": {
+          "absolute_error_wh": 15.745996244334384,
+          "signed_error_wh": -15.745996244334384,
+          "absolute_error_pct": 53.97116937211702
+        },
+        "Indianapolis": {
+          "absolute_error_wh": 5.742953061277547,
+          "signed_error_wh": 5.742953061277547,
+          "absolute_error_pct": 12.8045615504232
+        },
+        "Laval": {
+          "absolute_error_wh": 16.2711170035165,
+          "signed_error_wh": -16.2711170035165,
+          "absolute_error_pct": 81.84998727539728
+        }
+      },
+      "runs": [
+        {
+          "track": "Front Campus",
+          "run": "front-campus-2026-08-06-run-03-telemetry",
+          "measured_wh": 29.17482876046261,
+          "predicted_wh": 13.428832516128226,
+          "seconds": 621.945,
+          "signed_error_wh": -15.745996244334384,
+          "absolute_error_wh": 15.745996244334384,
+          "absolute_error_pct": 53.97116937211702
+        },
+        {
+          "track": "Indianapolis",
+          "run": "telemetry_20260411_122713",
+          "measured_wh": 44.85083724782234,
+          "predicted_wh": 50.59379030909989,
+          "seconds": 1989.778,
+          "signed_error_wh": 5.742953061277547,
+          "absolute_error_wh": 5.742953061277547,
+          "absolute_error_pct": 12.8045615504232
+        },
+        {
+          "track": "Laval",
+          "run": "2026-09-20-14-00",
+          "measured_wh": 19.879193076438415,
+          "predicted_wh": 3.6080760729219143,
+          "seconds": 211.69200000000055,
+          "signed_error_wh": -16.2711170035165,
+          "absolute_error_wh": 16.2711170035165,
+          "absolute_error_pct": 81.84998727539728
+        }
+      ]
+    },
+    "calibrated_physics_without_residual": {
+      "absolute_error_wh": 12.025014426587973,
+      "signed_error_wh": -11.552320325879899,
+      "absolute_error_pct": 49.59825421295127,
+      "interval_mae_w": 129.47693734517844,
+      "by_track": {
+        "Front Campus": {
+          "absolute_error_wh": 19.148525734405354,
+          "signed_error_wh": -19.148525734405354,
+          "absolute_error_pct": 65.6337210806708
+        },
+        "Indianapolis": {
+          "absolute_error_wh": 0.7090411510621095,
+          "signed_error_wh": 0.7090411510621095,
+          "absolute_error_pct": 1.5808872131958605
+        },
+        "Laval": {
+          "absolute_error_wh": 16.217476394296458,
+          "signed_error_wh": -16.217476394296458,
+          "absolute_error_pct": 81.58015434498715
+        }
+      },
+      "runs": [
+        {
+          "track": "Front Campus",
+          "run": "front-campus-2026-08-06-run-03-telemetry",
+          "measured_wh": 29.17482876046261,
+          "predicted_wh": 10.026303026057256,
+          "seconds": 621.945,
+          "signed_error_wh": -19.148525734405354,
+          "absolute_error_wh": 19.148525734405354,
+          "absolute_error_pct": 65.6337210806708
+        },
+        {
+          "track": "Indianapolis",
+          "run": "telemetry_20260411_122713",
+          "measured_wh": 44.85083724782234,
+          "predicted_wh": 45.55987839888445,
+          "seconds": 1989.778,
+          "signed_error_wh": 0.7090411510621095,
+          "absolute_error_wh": 0.7090411510621095,
+          "absolute_error_pct": 1.5808872131958605
+        },
+        {
+          "track": "Laval",
+          "run": "2026-09-20-14-00",
+          "measured_wh": 19.879193076438415,
+          "predicted_wh": 3.6617166821419587,
+          "seconds": 211.69200000000055,
+          "signed_error_wh": -16.217476394296458,
+          "absolute_error_wh": 16.217476394296458,
+          "absolute_error_pct": 81.58015434498715
+        }
+      ]
+    },
+    "telemetry_only_mlp": {
+      "absolute_error_wh": 8.210266330596138,
+      "signed_error_wh": -8.210266330596138,
+      "absolute_error_pct": 35.309917133662715,
+      "interval_mae_w": 127.40380807673823,
+      "by_track": {
+        "Front Campus": {
+          "absolute_error_wh": 8.58754113573141,
+          "signed_error_wh": -8.58754113573141,
+          "absolute_error_pct": 29.434761061457014
+        },
+        "Indianapolis": {
+          "absolute_error_wh": 1.5027202877872412,
+          "signed_error_wh": -1.5027202877872412,
+          "absolute_error_pct": 3.3504843610476933
+        },
+        "Laval": {
+          "absolute_error_wh": 14.540537568269762,
+          "signed_error_wh": -14.540537568269762,
+          "absolute_error_pct": 73.14450597848344
+        }
+      },
+      "runs": [
+        {
+          "track": "Front Campus",
+          "run": "front-campus-2026-08-06-run-03-telemetry",
+          "measured_wh": 29.17482876046261,
+          "predicted_wh": 20.5872876247312,
+          "seconds": 621.945,
+          "signed_error_wh": -8.58754113573141,
+          "absolute_error_wh": 8.58754113573141,
+          "absolute_error_pct": 29.434761061457014
+        },
+        {
+          "track": "Indianapolis",
+          "run": "telemetry_20260411_122713",
+          "measured_wh": 44.85083724782234,
+          "predicted_wh": 43.3481169600351,
+          "seconds": 1989.778,
+          "signed_error_wh": -1.5027202877872412,
+          "absolute_error_wh": 1.5027202877872412,
+          "absolute_error_pct": 3.3504843610476933
+        },
+        {
+          "track": "Laval",
+          "run": "2026-09-20-14-00",
+          "measured_wh": 19.879193076438415,
+          "predicted_wh": 5.338655508168652,
+          "seconds": 211.69200000000055,
+          "signed_error_wh": -14.540537568269762,
+          "absolute_error_wh": 14.540537568269762,
+          "absolute_error_pct": 73.14450597848344
+        }
+      ]
+    }
+  },
+  "physical_only_diagnostics": {
+    "cost": 1.3782692795483549,
+    "optimality": 5.00427683165887e-09,
+    "evaluations": 11,
+    "converged": true,
+    "physical_parameters": {
+      "total_mass_kg": 60.00000026295054,
+      "rolling_resistance": 0.009999999999999998,
+      "cd_area_m2": 0.07129954787821614,
+      "efficiency": 0.9234474095964592
+    }
+  },
+  "training_manifest": {
+    "sources": [
+      {
+        "path": "data/runs/laval/2026-09-19-19-07.csv",
+        "sha256": "41ffda9c7fd261dcfd9586205be211c0765b15bde32c9376f71869f97ab4f5fb",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 8,
+        "seconds": 3.492000000000001,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-19-09.csv",
+        "sha256": "d8565cd0e93f94598e1d708c176e35a54c057ad04cc9ac62f460146a4e9038b0",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 2,
+        "seconds": 0.9329999999999927,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-19-26.csv",
+        "sha256": "9793225e4c4bb8b7b10a67b457ab3d9634f895a945920f01a08b6d5da153754c",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 2028,
+        "seconds": 952.2659999999992,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-20-41.csv",
+        "sha256": "aea3c37670451f5f27f80fcb025b429ca55313388a44086822b1088f565cc83f",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 70,
+        "seconds": 32.57099999999953,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-21-09.csv",
+        "sha256": "f93025bb9f5c9b8d90b0e81b7ab2dd1db75f7054a8260cd68a3529521c6dad54",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 5,
+        "seconds": 2.3870000000000005,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-21-13.csv",
+        "sha256": "3a72bbfb4ae8dac6fc3225aa3a4de3a071aa5f92a9892649fa7da50d33a7b387",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-21-28.csv",
+        "sha256": "7accdf0ae280fc0a6a4ef86d520b82b013d17cc6f5966faa09bc86df376309ef",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 71,
+        "seconds": 33.66700000000003,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-21-33.csv",
+        "sha256": "647d927b7c68aa93d8b072cea4f086088734112cd39402e489e47c9738ce0475",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-19-22-16.csv",
+        "sha256": "26b158b0d6106501f068fe63c93f79c9cf293da3da6ef2671569564408b47130",
+        "track": "Laval",
+        "holdout": false,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-14-00.csv",
+        "sha256": "f22925701214037bdebcfaf283cd0634af080b84a4aa9368b79e73af19025df9",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": true,
+        "intervals": 440,
+        "seconds": 211.69200000000055,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-15-36.csv",
+        "sha256": "fee16967966dd4ec08cb9ecff19d203b22d488074bfc4a93ea86eb63a260bad2",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 1,
+        "seconds": 0.4830000000000041,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-15-41.csv",
+        "sha256": "37fcaca19f0a2c71aaf450728dbc49cac05441952b0bc2eb95e360aa1ef36847",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-16-04.csv",
+        "sha256": "eb8f7480d832b94e4a239763e6b751bd7664ac591891fa40bd6a910d56f7f27c",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-16-15.csv",
+        "sha256": "929aa70441c7caf1d27f189f9fb6a82efe680f555b58287dff098e6f3c1be07a",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-17-02.csv",
+        "sha256": "aab800aea63e2e3e81f77c82e73b9954bcff71af498538fde64673cdc4c4380f",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-17-11-001.csv",
+        "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/laval/2026-09-20-17-11.csv",
+        "sha256": "f8d1139f733cd3ac2145c1dc38340c71ef7ede5486887f866d00d65d55e819d2",
+        "track": "Laval",
+        "holdout": true,
+        "accepted": false,
+        "intervals": 0,
+        "seconds": 0.0,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/front-campus-2026-08-06-run-01/front-campus-2026-08-06-run-01-telemetry.csv",
+        "sha256": "cd7e4f32ed5c61b01a9119fce83bec716c319f5dc62f6bb5330db99dfe02557a",
+        "track": "Front Campus",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 2346,
+        "seconds": 712.662,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/front-campus-2026-08-06-run-02/front-campus-2026-08-06-run-02-telemetry.csv",
+        "sha256": "801bc21f695daed99493e4cde1b4f5723ea5697657872924c708987223191d68",
+        "track": "Front Campus",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 1197,
+        "seconds": 368.898,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/front-campus-2026-08-06-run-03/front-campus-2026-08-06-run-03-telemetry.csv",
+        "sha256": "6696c97ebe32cc714ae58572d40e2d49d7fe171727166bee9f4031a08fc67840",
+        "track": "Front Campus",
+        "holdout": true,
+        "accepted": true,
+        "intervals": 2004,
+        "seconds": 621.945,
+        "gpx_sha256": null
+      },
+      {
+        "path": "data/runs/morning-run/telemetry_20260411_112302.csv",
+        "sha256": "da43ae8e02d1d9b499c8e020b1d9942aa8de0ad0c944eb42aafb308b06a4be9f",
+        "track": "Indianapolis",
+        "holdout": false,
+        "accepted": true,
+        "intervals": 2635,
+        "seconds": 1604.25,
+        "gpx_sha256": "c6c5215723240b5a7005b9e6f13a583f2bbbe031d0ec04851d6409722d629bc2"
+      },
+      {
+        "path": "data/runs/afternoon-run/telemetry_20260411_122713.csv",
+        "sha256": "438f1283cfeda4a9928d7211f090741daaef67214c1d0bdcbcf7e174079d11fb",
+        "track": "Indianapolis",
+        "holdout": true,
+        "accepted": true,
+        "intervals": 3269,
+        "seconds": 1989.7780000000002,
+        "gpx_sha256": "d4ead2545927512b144835a4ecc20179b1902f18267bd6a414e668524deebe7a"
+      }
+    ],
+    "encoder_sha256": "240d4bf9fae924de0e9daf9970f692eacb2d7b65ac07697f0a3ff04f9e93364a",
+    "prior": [
+      100.0,
+      0.003,
+      0.07032,
+      0.82
+    ],
+    "bounds": [
+      [
+        60.0,
+        0.001,
+        0.04,
+        0.5
+      ],
+      [
+        140.0,
+        0.01,
+        0.13,
+        0.95
+      ]
+    ],
+    "objective_version": 1
+  },
+  "selected": {
+    "options": {
+      "kind": "pretrained",
+      "energy_weight": 0.2,
+      "physics_weight": 0.1,
+      "ridge": 0.1
+    },
+    "development_mae_wh": 5.346766017785203,
+    "diagnostics": [
+      {
+        "cost": 0.3562512533182933,
+        "optimality": 2.911376714632985e-06,
+        "evaluations": 10,
+        "converged": true,
+        "physical_parameters": {
+          "total_mass_kg": 60.00000000000434,
+          "rolling_resistance": 0.003109584857652522,
+          "cd_area_m2": 0.06750619648056734,
+          "efficiency": 0.949999999999459
+        }
+      },
+      {
+        "cost": 0.2621260518876406,
+        "optimality": 2.7778288024665754e-07,
+        "evaluations": 10,
+        "converged": true,
+        "physical_parameters": {
+          "total_mass_kg": 60.00000000000002,
+          "rolling_resistance": 0.002996702945974539,
+          "cd_area_m2": 0.06770737713274255,
+          "efficiency": 0.9499999999999992
+        }
+      },
+      {
+        "cost": 0.3800633677387838,
+        "optimality": 2.1389370058553375e-08,
+        "evaluations": 10,
+        "converged": true,
+        "physical_parameters": {
+          "total_mass_kg": 60.000000000000064,
+          "rolling_resistance": 0.0030430374329225235,
+          "cd_area_m2": 0.06825459289139595,
+          "efficiency": 0.9499999999999957
+        }
+      },
+      {
+        "cost": 0.36796054277032925,
+        "optimality": 8.850597288892023e-07,
+        "evaluations": 8,
+        "converged": true,
+        "physical_parameters": {
+          "total_mass_kg": 80.92395143422291,
+          "rolling_resistance": 0.0031276546832729726,
+          "cd_area_m2": 0.07028653113259117,
+          "efficiency": 0.8830075150390853
+        }
+      }
+    ],
+    "max_nfev": 80
+  },
+  "diagnostics": {
+    "cost": 0.3482770891739645,
+    "optimality": 1.181777097708503e-08,
+    "evaluations": 11,
+    "converged": true,
+    "physical_parameters": {
+      "total_mass_kg": 60.0,
+      "rolling_resistance": 0.0030807043822147456,
+      "cd_area_m2": 0.06869625959133228,
+      "efficiency": 0.949999999999998
+    }
+  },
+  "candidates": [
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.592749919237338,
+      "diagnostics": [
+        {
+          "cost": 0.31092851506124636,
+          "optimality": 2.027300987977529e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.08787257242601,
+            "rolling_resistance": 0.003078222901249772,
+            "cd_area_m2": 0.07010575273222609,
+            "efficiency": 0.832674650562696
+          }
+        },
+        {
+          "cost": 0.21015880279578097,
+          "optimality": 1.703931060945043e-05,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.81732951990833,
+            "rolling_resistance": 0.002728730795416046,
+            "cd_area_m2": 0.06806976743099387,
+            "efficiency": 0.8454570828705169
+          }
+        },
+        {
+          "cost": 0.34951983693951477,
+          "optimality": 9.835304453614043e-06,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 95.60728166684738,
+            "rolling_resistance": 0.0028826846040692564,
+            "cd_area_m2": 0.06906585518307518,
+            "efficiency": 0.8405624551559613
+          }
+        },
+        {
+          "cost": 0.35162010573759966,
+          "optimality": 2.805269638400578e-05,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.66269061903898,
+            "rolling_resistance": 0.0030809212110593834,
+            "cd_area_m2": 0.06940433141645959,
+            "efficiency": 0.8357956016361847
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 0.2,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.557855528129149,
+      "diagnostics": [
+        {
+          "cost": 0.3224841433377459,
+          "optimality": 4.291492273978542e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 84.67006033765428,
+            "rolling_resistance": 0.0030640642946512977,
+            "cd_area_m2": 0.06972578806108229,
+            "efficiency": 0.8746116917582171
+          }
+        },
+        {
+          "cost": 0.22108715477941177,
+          "optimality": 2.710275852065902e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.52278256837003,
+            "rolling_resistance": 0.0027766322318185342,
+            "cd_area_m2": 0.06790703455288385,
+            "efficiency": 0.8834216600676834
+          }
+        },
+        {
+          "cost": 0.36058290166475726,
+          "optimality": 1.8329425488635618e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.43001267831417,
+            "rolling_resistance": 0.0028996178639482434,
+            "cd_area_m2": 0.06876530258068551,
+            "efficiency": 0.8796246383302038
+          }
+        },
+        {
+          "cost": 0.3541932652868467,
+          "optimality": 2.3368182785841757e-05,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.33998761346344,
+            "rolling_resistance": 0.003081603459244659,
+            "cd_area_m2": 0.06937059319617907,
+            "efficiency": 0.8447057797603256
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.3604445306808906,
+      "diagnostics": [
+        {
+          "cost": 0.36982456392724283,
+          "optimality": 4.3784719128137084e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000001,
+            "rolling_resistance": 0.0030439056540242865,
+            "cd_area_m2": 0.06753069044282524,
+            "efficiency": 0.9499999999999761
+          }
+        },
+        {
+          "cost": 0.26514127150382616,
+          "optimality": 3.321969919852473e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000003,
+            "rolling_resistance": 0.002858149253169993,
+            "cd_area_m2": 0.06627836091011612,
+            "efficiency": 0.9499999999999991
+          }
+        },
+        {
+          "cost": 0.4056177792233671,
+          "optimality": 7.382091607194166e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0000000000009,
+            "rolling_resistance": 0.0029462781562965955,
+            "cd_area_m2": 0.06684805417379264,
+            "efficiency": 0.9499999999999769
+          }
+        },
+        {
+          "cost": 0.3723536879630759,
+          "optimality": 2.4299076981128155e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.18085197177307,
+            "rolling_resistance": 0.0031214416740374317,
+            "cd_area_m2": 0.0692049343043577,
+            "efficiency": 0.8819581286840114
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 1.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.372278058698654,
+      "diagnostics": [
+        {
+          "cost": 0.3412539085092736,
+          "optimality": 1.6412613457889025e-07,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.07444323877665,
+            "rolling_resistance": 0.003019588932228783,
+            "cd_area_m2": 0.07010453732456931,
+            "efficiency": 0.8327306077716071
+          }
+        },
+        {
+          "cost": 0.21527988378606838,
+          "optimality": 3.210403405609283e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.96655535340167,
+            "rolling_resistance": 0.002747187262280416,
+            "cd_area_m2": 0.06853698890729897,
+            "efficiency": 0.8440063382139203
+          }
+        },
+        {
+          "cost": 0.3750897018894497,
+          "optimality": 5.7350609020711315e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 95.6923031285255,
+            "rolling_resistance": 0.0028541850585384115,
+            "cd_area_m2": 0.0693882511832127,
+            "efficiency": 0.8395992269520812
+          }
+        },
+        {
+          "cost": 0.35989690291855936,
+          "optimality": 1.789490465825376e-06,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.67392144871066,
+            "rolling_resistance": 0.0030557226571523133,
+            "cd_area_m2": 0.06938492594700504,
+            "efficiency": 0.8357906629228197
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 1.0,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.362940698388106,
+      "diagnostics": [
+        {
+          "cost": 0.3529523674484484,
+          "optimality": 1.5323510839087567e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 84.75926032108603,
+            "rolling_resistance": 0.003012313740206162,
+            "cd_area_m2": 0.06971509217839404,
+            "efficiency": 0.8743810743476961
+          }
+        },
+        {
+          "cost": 0.22639153485611463,
+          "optimality": 9.451791790614941e-07,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.68178298572994,
+            "rolling_resistance": 0.002792390414904002,
+            "cd_area_m2": 0.06833903535714855,
+            "efficiency": 0.8822755501368896
+          }
+        },
+        {
+          "cost": 0.3864609522459367,
+          "optimality": 2.760945776110425e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.6281909745857,
+            "rolling_resistance": 0.002875918510504934,
+            "cd_area_m2": 0.06905574507804679,
+            "efficiency": 0.8785895837963023
+          }
+        },
+        {
+          "cost": 0.3626443002929192,
+          "optimality": 2.3495600569021276e-06,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.33761975732892,
+            "rolling_resistance": 0.0030582226842679645,
+            "cd_area_m2": 0.06937224870592718,
+            "efficiency": 0.8447200441204223
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 1.0,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.148608566769479,
+      "diagnostics": [
+        {
+          "cost": 0.4024997881980778,
+          "optimality": 7.327885178797129e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000710585,
+            "rolling_resistance": 0.0030178066048046166,
+            "cd_area_m2": 0.06752954522320818,
+            "efficiency": 0.9499999997591712
+          }
+        },
+        {
+          "cost": 0.2719238377777717,
+          "optimality": 5.117513473965399e-09,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0028764157141812205,
+            "cd_area_m2": 0.06659201057016795,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.43482111244694355,
+          "optimality": 1.0552379467625769e-06,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000085,
+            "rolling_resistance": 0.002943485327538934,
+            "cd_area_m2": 0.06703779319000511,
+            "efficiency": 0.9499999999999171
+          }
+        },
+        {
+          "cost": 0.3824234435862747,
+          "optimality": 2.1567137691115427e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.18958870452295,
+            "rolling_resistance": 0.003101567250749947,
+            "cd_area_m2": 0.06922193957941211,
+            "efficiency": 0.8819184825479216
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 5.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.337891020892911,
+      "diagnostics": [
+        {
+          "cost": 0.43734564701737294,
+          "optimality": 5.7983242042016804e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.4117429736843,
+            "rolling_resistance": 0.0027905199326949764,
+            "cd_area_m2": 0.06989943450758258,
+            "efficiency": 0.8357806056842669
+          }
+        },
+        {
+          "cost": 0.22209670114391866,
+          "optimality": 1.7276839354892978e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.91837022808134,
+            "rolling_resistance": 0.002725841020388122,
+            "cd_area_m2": 0.06858399200988241,
+            "efficiency": 0.8440971703571604
+          }
+        },
+        {
+          "cost": 0.4416495112424582,
+          "optimality": 6.251196492688006e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 95.00248752714874,
+            "rolling_resistance": 0.0026311013837225735,
+            "cd_area_m2": 0.06847925228762075,
+            "efficiency": 0.8439845177260994
+          }
+        },
+        {
+          "cost": 0.36700492287327574,
+          "optimality": 3.8838303412615585e-07,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.69134714841401,
+            "rolling_resistance": 0.003037068094009343,
+            "cd_area_m2": 0.06946405261812975,
+            "efficiency": 0.8355629021417948
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 5.0,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.339295407520158,
+      "diagnostics": [
+        {
+          "cost": 0.44891890840951054,
+          "optimality": 2.464101533229052e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 84.43424043134092,
+            "rolling_resistance": 0.0028195674801506404,
+            "cd_area_m2": 0.06952155582446529,
+            "efficiency": 0.8756348453201391
+          }
+        },
+        {
+          "cost": 0.23331084117960843,
+          "optimality": 7.765175168135711e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.6065113043523,
+            "rolling_resistance": 0.0027753347304195672,
+            "cd_area_m2": 0.06838790105122823,
+            "efficiency": 0.8823466388394784
+          }
+        },
+        {
+          "cost": 0.4527998317429699,
+          "optimality": 1.1449164553710249e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.2048996506206,
+            "rolling_resistance": 0.002693350448684225,
+            "cd_area_m2": 0.06819639910935767,
+            "efficiency": 0.8812015496291014
+          }
+        },
+        {
+          "cost": 0.3699268465576361,
+          "optimality": 1.621335911309446e-07,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 94.34125242796954,
+            "rolling_resistance": 0.0030407767405544565,
+            "cd_area_m2": 0.06946006870619151,
+            "efficiency": 0.8445240603360029
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "compact",
+        "energy_weight": 5.0,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.356803675231512,
+      "diagnostics": [
+        {
+          "cost": 0.49948180182566554,
+          "optimality": 5.275364905173033e-06,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000014,
+            "rolling_resistance": 0.002879440682118753,
+            "cd_area_m2": 0.06721937447766278,
+            "efficiency": 0.9499999999999768
+          }
+        },
+        {
+          "cost": 0.27975591136497874,
+          "optimality": 9.847655050253517e-08,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000005471385,
+            "rolling_resistance": 0.0028695090979728465,
+            "cd_area_m2": 0.06667170665076798,
+            "efficiency": 0.9499999991991652
+          }
+        },
+        {
+          "cost": 0.5017647996237886,
+          "optimality": 3.158943221072061e-06,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000007791,
+            "rolling_resistance": 0.0028073866115980667,
+            "cd_area_m2": 0.0660985257200808,
+            "efficiency": 0.9499999999680496
+          }
+        },
+        {
+          "cost": 0.39130465474767523,
+          "optimality": 1.861346816051596e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.13625728026582,
+            "rolling_resistance": 0.0030830085010304133,
+            "cd_area_m2": 0.06934062723580958,
+            "efficiency": 0.8818313141176679
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.182828476307532,
+      "diagnostics": [
+        {
+          "cost": 0.26604230111679306,
+          "optimality": 1.873436914023559e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.94708713829469,
+            "rolling_resistance": 0.0029890971715785695,
+            "cd_area_m2": 0.07006777314138218,
+            "efficiency": 0.8250812127540302
+          }
+        },
+        {
+          "cost": 0.1888535846672776,
+          "optimality": 3.7169293295408017e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.41670771284345,
+            "rolling_resistance": 0.0029372946662114194,
+            "cd_area_m2": 0.07025613725820722,
+            "efficiency": 0.8310361600576328
+          }
+        },
+        {
+          "cost": 0.29292223702177833,
+          "optimality": 5.215389917499812e-05,
+          "evaluations": 21,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.14439069191286,
+            "rolling_resistance": 0.0029531805402987638,
+            "cd_area_m2": 0.0702340742184273,
+            "efficiency": 0.8238897121143238
+          }
+        },
+        {
+          "cost": 0.325824658362189,
+          "optimality": 1.2599154843796062e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.52784217907819,
+            "rolling_resistance": 0.0029704465333031727,
+            "cd_area_m2": 0.07002826431569192,
+            "efficiency": 0.8269322566785478
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.106595970687535,
+      "diagnostics": [
+        {
+          "cost": 0.27851435465587987,
+          "optimality": 2.989509001038006e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 85.95742008739239,
+            "rolling_resistance": 0.002982194592319187,
+            "cd_area_m2": 0.06966923138221849,
+            "efficiency": 0.8711808340002795
+          }
+        },
+        {
+          "cost": 0.20093996219291724,
+          "optimality": 6.138262996314818e-05,
+          "evaluations": 40,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 84.04052776332668,
+            "rolling_resistance": 0.002936601545050133,
+            "cd_area_m2": 0.06989477055959004,
+            "efficiency": 0.8759686289111837
+          }
+        },
+        {
+          "cost": 0.3056898855420374,
+          "optimality": 6.0904148651329064e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 85.42416698410389,
+            "rolling_resistance": 0.0029507183146439873,
+            "cd_area_m2": 0.06983751411636771,
+            "efficiency": 0.8723484307728138
+          }
+        },
+        {
+          "cost": 0.32889283219188786,
+          "optimality": 1.2723225148803322e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 95.94106326332025,
+            "rolling_resistance": 0.0029695252849752402,
+            "cd_area_m2": 0.06992605995395354,
+            "efficiency": 0.8375602885537932
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 5.935497157262858,
+      "diagnostics": [
+        {
+          "cost": 0.3290176838248063,
+          "optimality": 3.915231493280182e-05,
+          "evaluations": 13,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029944921305478833,
+            "cd_area_m2": 0.06741029800775124,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.24735227547037558,
+          "optimality": 1.0567285037855903e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000022,
+            "rolling_resistance": 0.0029444765521084142,
+            "cd_area_m2": 0.0676898377455945,
+            "efficiency": 0.9499999999999765
+          }
+        },
+        {
+          "cost": 0.3572084295650413,
+          "optimality": 1.574709843435581e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000967,
+            "rolling_resistance": 0.0029682107106158775,
+            "cd_area_m2": 0.06770253290966877,
+            "efficiency": 0.9499999999977473
+          }
+        },
+        {
+          "cost": 0.3502752259283988,
+          "optimality": 3.6260036919530565e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.95785787779204,
+            "rolling_resistance": 0.0030166916579217784,
+            "cd_area_m2": 0.06964211785191493,
+            "efficiency": 0.8792310011619029
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 1.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.844085249166665,
+      "diagnostics": [
+        {
+          "cost": 0.28414227380711526,
+          "optimality": 1.4338712082726576e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.63459014943403,
+            "rolling_resistance": 0.0029917367286474593,
+            "cd_area_m2": 0.07014656403287463,
+            "efficiency": 0.8219645072618198
+          }
+        },
+        {
+          "cost": 0.19205455475695823,
+          "optimality": 3.9755759322617303e-05,
+          "evaluations": 16,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.5210591902638,
+            "rolling_resistance": 0.002936974176247322,
+            "cd_area_m2": 0.07022846641998697,
+            "efficiency": 0.8306701727779396
+          }
+        },
+        {
+          "cost": 0.3062780322515149,
+          "optimality": 2.825433052419668e-05,
+          "evaluations": 19,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.51780132480658,
+            "rolling_resistance": 0.0029451126841822575,
+            "cd_area_m2": 0.07023921137660215,
+            "efficiency": 0.8222734817765535
+          }
+        },
+        {
+          "cost": 0.33096055228663873,
+          "optimality": 2.32819538459046e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.85720958738571,
+            "rolling_resistance": 0.002965651396400115,
+            "cd_area_m2": 0.06997739566974813,
+            "efficiency": 0.8256517989739978
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 1.0,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.797366012237326,
+      "diagnostics": [
+        {
+          "cost": 0.29694764530265644,
+          "optimality": 1.242529790601181e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.52034042826236,
+            "rolling_resistance": 0.0029844358162567286,
+            "cd_area_m2": 0.06973693530552852,
+            "efficiency": 0.8694639535212476
+          }
+        },
+        {
+          "cost": 0.20422671114095664,
+          "optimality": 4.2910150693410937e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.97666078811402,
+            "rolling_resistance": 0.0029368763915744336,
+            "cd_area_m2": 0.06986132451548148,
+            "efficiency": 0.876198705868394
+          }
+        },
+        {
+          "cost": 0.319475002208014,
+          "optimality": 6.376884685618182e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 85.88264899465524,
+            "rolling_resistance": 0.002942598135525251,
+            "cd_area_m2": 0.06981766557595318,
+            "efficiency": 0.8711113404071797
+          }
+        },
+        {
+          "cost": 0.33421379930859224,
+          "optimality": 2.041032890864403e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.24083934969623,
+            "rolling_resistance": 0.0029629324838197327,
+            "cd_area_m2": 0.06986610029006943,
+            "efficiency": 0.8365174541584041
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 1.0,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 6.813934058335616,
+      "diagnostics": [
+        {
+          "cost": 0.3499013398088219,
+          "optimality": 1.2943962171816249e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000031015,
+            "rolling_resistance": 0.002996453356562836,
+            "cd_area_m2": 0.06741635976301898,
+            "efficiency": 0.9499999999884414
+          }
+        },
+        {
+          "cost": 0.25168271549277405,
+          "optimality": 9.529732610508157e-06,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000381,
+            "rolling_resistance": 0.0029528378709885754,
+            "cd_area_m2": 0.0676754748575879,
+            "efficiency": 0.9499999999993374
+          }
+        },
+        {
+          "cost": 0.37363702881549377,
+          "optimality": 3.7345168938661064e-05,
+          "evaluations": 18,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029663081691463913,
+            "cd_area_m2": 0.06758787708494952,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.357392283791076,
+          "optimality": 4.34684864294853e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.96332872616783,
+            "rolling_resistance": 0.0030102654925585463,
+            "cd_area_m2": 0.06953516883340133,
+            "efficiency": 0.8794138554737898
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 5.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.093381480021624,
+      "diagnostics": [
+        {
+          "cost": 0.32405160753929874,
+          "optimality": 0.00015617539981828182,
+          "evaluations": 17,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 100.79568618585444,
+            "rolling_resistance": 0.002989727247025823,
+            "cd_area_m2": 0.07033027642556078,
+            "efficiency": 0.8164416404522361
+          }
+        },
+        {
+          "cost": 0.19525668438359792,
+          "optimality": 2.5035784218454464e-05,
+          "evaluations": 22,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.50541782373209,
+            "rolling_resistance": 0.0029341512270626446,
+            "cd_area_m2": 0.07019468072077376,
+            "efficiency": 0.8308032282377161
+          }
+        },
+        {
+          "cost": 0.3288402687599732,
+          "optimality": 0.0001027587686691097,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 100.21796139873419,
+            "rolling_resistance": 0.0029449159151450845,
+            "cd_area_m2": 0.07030701042938163,
+            "efficiency": 0.8190677889048362
+          }
+        },
+        {
+          "cost": 0.33470079835287314,
+          "optimality": 1.876983050336841e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.10891854347186,
+            "rolling_resistance": 0.0029604166602958297,
+            "cd_area_m2": 0.06992611858922461,
+            "efficiency": 0.8246901123162604
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 5.0,
+        "physics_weight": 0.01,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.094792675241137,
+      "diagnostics": [
+        {
+          "cost": 0.33740578683547673,
+          "optimality": 1.4493736220711536e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.37018795637296,
+            "rolling_resistance": 0.00297847516868161,
+            "cd_area_m2": 0.06988669886082957,
+            "efficiency": 0.8667087347089166
+          }
+        },
+        {
+          "cost": 0.2074440883029798,
+          "optimality": 3.5967797804717394e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.96435232571103,
+            "rolling_resistance": 0.0029362509396115228,
+            "cd_area_m2": 0.06985012913637383,
+            "efficiency": 0.8762527896558642
+          }
+        },
+        {
+          "cost": 0.34253777264493757,
+          "optimality": 0.00015236018425173457,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.8344973552539,
+            "rolling_resistance": 0.0029359582471223996,
+            "cd_area_m2": 0.06981612217415047,
+            "efficiency": 0.8684055709893324
+          }
+        },
+        {
+          "cost": 0.33810473915354755,
+          "optimality": 1.5384392670170048e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 96.46328952339411,
+            "rolling_resistance": 0.0029574803530220254,
+            "cd_area_m2": 0.06981574986084095,
+            "efficiency": 0.8357487843254114
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 5.0,
+        "physics_weight": 0.1,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.146109159807988,
+      "diagnostics": [
+        {
+          "cost": 0.39396111645517157,
+          "optimality": 1.8837594962315535e-05,
+          "evaluations": 17,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000567439,
+            "rolling_resistance": 0.0029751340493150264,
+            "cd_area_m2": 0.06747476270722315,
+            "efficiency": 0.9499999986644532
+          }
+        },
+        {
+          "cost": 0.2555079228098586,
+          "optimality": 1.1707893343709894e-05,
+          "evaluations": 16,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000018994087505,
+            "rolling_resistance": 0.0029551010549488392,
+            "cd_area_m2": 0.06768899361928625,
+            "efficiency": 0.9499974602251233
+          }
+        },
+        {
+          "cost": 0.39912400034149637,
+          "optimality": 2.3547487479860796e-05,
+          "evaluations": 18,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000475744074,
+            "rolling_resistance": 0.0029439448310066814,
+            "cd_area_m2": 0.06724320805453589,
+            "efficiency": 0.9499993266228297
+          }
+        },
+        {
+          "cost": 0.3627159483380283,
+          "optimality": 3.618797125181934e-05,
+          "evaluations": 16,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.91097899178169,
+            "rolling_resistance": 0.0030047927259475955,
+            "cd_area_m2": 0.06948882196485909,
+            "efficiency": 0.8796282778669031
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "physics_only",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 9.892166148277905,
+      "diagnostics": [
+        {
+          "cost": 0.9323675816727879,
+          "optimality": 4.655923875989445e-07,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000001,
+            "rolling_resistance": 0.005137436161862581,
+            "cd_area_m2": 0.05460089585328534,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.7491742859604341,
+          "optimality": 5.673744606956968e-08,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.00523099120019961,
+            "cd_area_m2": 0.07052129034346487,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.8979089929264308,
+          "optimality": 3.799856689527322e-08,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.005083087242136892,
+            "cd_area_m2": 0.06868455574864396,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.7043018790995619,
+          "optimality": 3.690589755463423e-05,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 81.70873991119579,
+            "rolling_resistance": 0.00595062737952801,
+            "cd_area_m2": 0.06076117038887838,
+            "efficiency": 0.8962509849049302
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "physics_only",
+        "energy_weight": 1.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 8.452682412942288,
+      "diagnostics": [
+        {
+          "cost": 1.5601712636947684,
+          "optimality": 3.976611226691322e-06,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.071884338294396,
+            "rolling_resistance": 0.009999999999999998,
+            "cd_area_m2": 0.08662568963979195,
+            "efficiency": 0.8784001558039262
+          }
+        },
+        {
+          "cost": 1.0383066486665675,
+          "optimality": 1.0177218944809422e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000001,
+            "rolling_resistance": 0.009737327606757636,
+            "cd_area_m2": 0.07349292270754665,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 1.3482797740534167,
+          "optimality": 4.589737727513305e-07,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000082,
+            "rolling_resistance": 0.00934580037666391,
+            "cd_area_m2": 0.07212719628240255,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 1.2829889023959635,
+          "optimality": 2.4611611141396057e-05,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 113.99467301705334,
+            "rolling_resistance": 0.003071049436781242,
+            "cd_area_m2": 0.04000000000012013,
+            "efficiency": 0.9053236399920267
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "physics_only",
+        "energy_weight": 5.0,
+        "physics_weight": 0.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 12.044438341155582,
+      "diagnostics": [
+        {
+          "cost": 2.8157863490198634,
+          "optimality": 5.437853194805937e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 90.45941791275344,
+            "rolling_resistance": 0.009999999999999998,
+            "cd_area_m2": 0.10022817640477914,
+            "efficiency": 0.762496384087505
+          }
+        },
+        {
+          "cost": 2.070920277010705,
+          "optimality": 1.8118740086916037e-09,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 74.10755592768784,
+            "rolling_resistance": 0.009999999999999998,
+            "cd_area_m2": 0.04000000000000001,
+            "efficiency": 0.9499999999999987
+          }
+        },
+        {
+          "cost": 3.188242551359405,
+          "optimality": 1.4257922721594603e-05,
+          "evaluations": 13,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 74.04279020411275,
+            "rolling_resistance": 0.009999980503737967,
+            "cd_area_m2": 0.04000000000000001,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 3.526275873979872,
+          "optimality": 3.054337559052744e-10,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 139.99999999987855,
+            "rolling_resistance": 0.0010000000000000005,
+            "cd_area_m2": 0.04000000000000001,
+            "efficiency": 0.926799559063332
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.0,
+        "physics_weight": 0.0,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 8.09695622875241,
+      "diagnostics": [
+        {
+          "cost": 0.2484382022555702,
+          "optimality": 3.8206788891945875e-05,
+          "evaluations": 33,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.79041007228084,
+            "rolling_resistance": 0.0029956377384557946,
+            "cd_area_m2": 0.07021685715289361,
+            "efficiency": 0.8211374471082665
+          }
+        },
+        {
+          "cost": 0.17541197411377202,
+          "optimality": 2.6918947119479946e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.46715015052538,
+            "rolling_resistance": 0.0029964601147967223,
+            "cd_area_m2": 0.07040484483740664,
+            "efficiency": 0.822139167835317
+          }
+        },
+        {
+          "cost": 0.26990622091280214,
+          "optimality": 1.8633824390314364e-05,
+          "evaluations": 33,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.89720253418292,
+            "rolling_resistance": 0.003008621894106791,
+            "cd_area_m2": 0.07036317575587558,
+            "efficiency": 0.8203580639533208
+          }
+        },
+        {
+          "cost": 0.31380909603520496,
+          "optimality": 2.6279581888671182e-06,
+          "evaluations": 5,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.74078724728913,
+            "rolling_resistance": 0.0029709608829767546,
+            "cd_area_m2": 0.07027067013580066,
+            "efficiency": 0.8212388726732875
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.0,
+        "physics_weight": 0.0,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 7.940740555439039,
+      "diagnostics": [
+        {
+          "cost": 0.2839359350121138,
+          "optimality": 6.985709256014163e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 88.16215476103106,
+            "rolling_resistance": 0.0030920692694719623,
+            "cd_area_m2": 0.06974839751728545,
+            "efficiency": 0.8646060352289331
+          }
+        },
+        {
+          "cost": 0.1990305123925913,
+          "optimality": 3.8965263188139865e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.33269088634582,
+            "rolling_resistance": 0.002877369598364041,
+            "cd_area_m2": 0.06944203653266647,
+            "efficiency": 0.8676532815251539
+          }
+        },
+        {
+          "cost": 0.3059248896238805,
+          "optimality": 1.9964610286517855e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.22251665004465,
+            "rolling_resistance": 0.0029441448701400786,
+            "cd_area_m2": 0.0697292704325573,
+            "efficiency": 0.8703190088247741
+          }
+        },
+        {
+          "cost": 0.3414060181555919,
+          "optimality": 3.3596657516080097e-07,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 91.06501454395347,
+            "rolling_resistance": 0.0030566488651053983,
+            "cd_area_m2": 0.07038784280528894,
+            "efficiency": 0.8541551428747067
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.0,
+        "physics_weight": 0.1,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 8.385663891742261,
+      "diagnostics": [
+        {
+          "cost": 0.3101815270356762,
+          "optimality": 1.1268734230631793e-05,
+          "evaluations": 19,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029576747125599962,
+            "cd_area_m2": 0.06742930066288434,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.23302387343315215,
+          "optimality": 1.0186047172888128e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029321227392240185,
+            "cd_area_m2": 0.06770190528907222,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.331936404983811,
+          "optimality": 2.0214367534215146e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000284,
+            "rolling_resistance": 0.0029501793472252076,
+            "cd_area_m2": 0.0676529382392729,
+            "efficiency": 0.9499999999999577
+          }
+        },
+        {
+          "cost": 0.3364367016172274,
+          "optimality": 8.239462397166347e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.2680251909612,
+            "rolling_resistance": 0.0030292581810119784,
+            "cd_area_m2": 0.07006175032887918,
+            "efficiency": 0.8776668449821416
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.0,
+        "physics_weight": 0.1,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 8.24467074726604,
+      "diagnostics": [
+        {
+          "cost": 0.3349033636980714,
+          "optimality": 4.794636224991766e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000001,
+            "rolling_resistance": 0.003051871864266587,
+            "cd_area_m2": 0.06727679493180126,
+            "efficiency": 0.9499999999999982
+          }
+        },
+        {
+          "cost": 0.24884276749483564,
+          "optimality": 1.2644265694576606e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000005292,
+            "rolling_resistance": 0.0029142901681044726,
+            "cd_area_m2": 0.0672027216539301,
+            "efficiency": 0.94999999999722
+          }
+        },
+        {
+          "cost": 0.35584141209299364,
+          "optimality": 4.944312176962881e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029720067345465214,
+            "cd_area_m2": 0.0676559733241258,
+            "efficiency": 0.9499999999999997
+          }
+        },
+        {
+          "cost": 0.358372637459438,
+          "optimality": 1.8165126335782131e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.23380957301457,
+            "rolling_resistance": 0.003136863508831748,
+            "cd_area_m2": 0.07054491115260594,
+            "efficiency": 0.8841355885682273
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.0,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 6.968411346423057,
+      "diagnostics": [
+        {
+          "cost": 0.2522866775522435,
+          "optimality": 5.605371082112001e-05,
+          "evaluations": 59,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.83397785054412,
+            "rolling_resistance": 0.002997656869441741,
+            "cd_area_m2": 0.0702224090150486,
+            "efficiency": 0.8209355362719076
+          }
+        },
+        {
+          "cost": 0.17815399579910637,
+          "optimality": 2.3205748701014454e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.46238787548458,
+            "rolling_resistance": 0.0029946002367018574,
+            "cd_area_m2": 0.07042182809190996,
+            "efficiency": 0.8221234266536745
+          }
+        },
+        {
+          "cost": 0.27482946106511746,
+          "optimality": 3.340105146826281e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.88826272735324,
+            "rolling_resistance": 0.0030095333564145975,
+            "cd_area_m2": 0.07041423582612664,
+            "efficiency": 0.8202875990799373
+          }
+        },
+        {
+          "cost": 0.31593838489107257,
+          "optimality": 2.5051067155891147e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.77143268836674,
+            "rolling_resistance": 0.0029723218040799203,
+            "cd_area_m2": 0.07024686165362333,
+            "efficiency": 0.8211561832997906
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.0,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 6.606142704748394,
+      "diagnostics": [
+        {
+          "cost": 0.29035223114840797,
+          "optimality": 4.575687974819816e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 89.08707292019957,
+            "rolling_resistance": 0.00310507369225636,
+            "cd_area_m2": 0.06974556554460778,
+            "efficiency": 0.8617736202578601
+          }
+        },
+        {
+          "cost": 0.20378177108392082,
+          "optimality": 2.6516600596196774e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.97358347993793,
+            "rolling_resistance": 0.0029039234803287326,
+            "cd_area_m2": 0.06960110243719407,
+            "efficiency": 0.8654524442664586
+          }
+        },
+        {
+          "cost": 0.3135045600576933,
+          "optimality": 4.250307734542623e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.14914096329943,
+            "rolling_resistance": 0.0029640740665165394,
+            "cd_area_m2": 0.06996853993419469,
+            "efficiency": 0.8671996242166942
+          }
+        },
+        {
+          "cost": 0.34466389392890784,
+          "optimality": 2.8801375764929762e-06,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 91.054395547083,
+            "rolling_resistance": 0.0030527616933312494,
+            "cd_area_m2": 0.07032504979404232,
+            "efficiency": 0.8543097882355636
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.1,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 7.074003016125148,
+      "diagnostics": [
+        {
+          "cost": 0.3153874860078606,
+          "optimality": 2.9375244758990333e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000084,
+            "rolling_resistance": 0.00297435440666415,
+            "cd_area_m2": 0.06751631751483737,
+            "efficiency": 0.9499999999998199
+          }
+        },
+        {
+          "cost": 0.23674419434776242,
+          "optimality": 3.2583695223994567e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.00295042640871471,
+            "cd_area_m2": 0.0678814937806403,
+            "efficiency": 0.9499999999999992
+          }
+        },
+        {
+          "cost": 0.3380478392958625,
+          "optimality": 7.2338431851912e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000135,
+            "rolling_resistance": 0.0029698803406383537,
+            "cd_area_m2": 0.06782372294690621,
+            "efficiency": 0.9499999999999704
+          }
+        },
+        {
+          "cost": 0.33919374853983686,
+          "optimality": 1.5823089386763413e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.21072694376693,
+            "rolling_resistance": 0.0030159488132126956,
+            "cd_area_m2": 0.0698045949729336,
+            "efficiency": 0.8782967376579369
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.1,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 6.6570547050872415,
+      "diagnostics": [
+        {
+          "cost": 0.34357588951287515,
+          "optimality": 8.999927084956533e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000007,
+            "rolling_resistance": 0.0030820237312588856,
+            "cd_area_m2": 0.06738912406161755,
+            "efficiency": 0.9499999999999906
+          }
+        },
+        {
+          "cost": 0.25509717698992823,
+          "optimality": 7.345190068653272e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.002962136294186951,
+            "cd_area_m2": 0.06761666576649855,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.3654561692815822,
+          "optimality": 7.385515819226252e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0030097638654389028,
+            "cd_area_m2": 0.06806427207178778,
+            "efficiency": 0.9499999999999997
+          }
+        },
+        {
+          "cost": 0.3625863424825504,
+          "optimality": 6.279835684110113e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.41212552376416,
+            "rolling_resistance": 0.0031307537944588212,
+            "cd_area_m2": 0.07029287427830765,
+            "efficiency": 0.8842006902614081
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 6.40483114579055,
+      "diagnostics": [
+        {
+          "cost": 0.25848840768920356,
+          "optimality": 2.860474687955904e-05,
+          "evaluations": 40,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.96170210506196,
+            "rolling_resistance": 0.0030039959898291004,
+            "cd_area_m2": 0.07024070293185439,
+            "efficiency": 0.8203377472044684
+          }
+        },
+        {
+          "cost": 0.180623980130337,
+          "optimality": 1.5195368325996133e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.47102777643495,
+            "rolling_resistance": 0.002993518534055969,
+            "cd_area_m2": 0.07043241937720289,
+            "efficiency": 0.822063431160726
+          }
+        },
+        {
+          "cost": 0.281301082315634,
+          "optimality": 1.3659283174561422e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.95446125277815,
+            "rolling_resistance": 0.003011280850503073,
+            "cd_area_m2": 0.07041073338359437,
+            "efficiency": 0.8200050594374588
+          }
+        },
+        {
+          "cost": 0.31811483962725745,
+          "optimality": 1.9635863692813826e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.83901471427039,
+            "rolling_resistance": 0.0029779439439796096,
+            "cd_area_m2": 0.07019680652658168,
+            "efficiency": 0.8209681348381579
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 5.563175042582093,
+      "diagnostics": [
+        {
+          "cost": 0.3001398295096768,
+          "optimality": 4.519650928778464e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 90.1816694872896,
+            "rolling_resistance": 0.0031175129499836,
+            "cd_area_m2": 0.06977751472398744,
+            "efficiency": 0.8582412809323107
+          }
+        },
+        {
+          "cost": 0.20916910366334251,
+          "optimality": 2.7344180925275956e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 88.46639977040272,
+            "rolling_resistance": 0.0029282576271714537,
+            "cd_area_m2": 0.06966120127784084,
+            "efficiency": 0.8638466574489563
+          }
+        },
+        {
+          "cost": 0.32474979156685757,
+          "optimality": 3.2087814412478516e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 88.45609983386757,
+            "rolling_resistance": 0.0029776361019028803,
+            "cd_area_m2": 0.0700358385879855,
+            "efficiency": 0.8631592778273642
+          }
+        },
+        {
+          "cost": 0.34870789333285707,
+          "optimality": 1.432586324304208e-05,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 91.38562884040218,
+            "rolling_resistance": 0.0030448108043933044,
+            "cd_area_m2": 0.0703869462141629,
+            "efficiency": 0.853083897424464
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.001
+      },
+      "development_mae_wh": 6.228681485820075,
+      "diagnostics": [
+        {
+          "cost": 0.32325543190306755,
+          "optimality": 2.428367908791139e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.002987857148900013,
+            "cd_area_m2": 0.06756127017007221,
+            "efficiency": 0.9499999999999998
+          }
+        },
+        {
+          "cost": 0.24024644112446283,
+          "optimality": 2.509418077151248e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000095,
+            "rolling_resistance": 0.002960362049370859,
+            "cd_area_m2": 0.06790738189275916,
+            "efficiency": 0.9499999999998031
+          }
+        },
+        {
+          "cost": 0.34702023488378486,
+          "optimality": 1.7624225783655504e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000002835,
+            "rolling_resistance": 0.002982011160744601,
+            "cd_area_m2": 0.06783234929940722,
+            "efficiency": 0.9499999999946437
+          }
+        },
+        {
+          "cost": 0.34238156856114477,
+          "optimality": 2.0336797238488997e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 83.32977015003723,
+            "rolling_resistance": 0.003015004263403149,
+            "cd_area_m2": 0.06971164585326957,
+            "efficiency": 0.8781494921311553
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 5.346766017785203,
+      "diagnostics": [
+        {
+          "cost": 0.3562512533182933,
+          "optimality": 2.911376714632985e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000434,
+            "rolling_resistance": 0.003109584857652522,
+            "cd_area_m2": 0.06750619648056734,
+            "efficiency": 0.949999999999459
+          }
+        },
+        {
+          "cost": 0.2621260518876406,
+          "optimality": 2.7778288024665754e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000002,
+            "rolling_resistance": 0.002996702945974539,
+            "cd_area_m2": 0.06770737713274255,
+            "efficiency": 0.9499999999999992
+          }
+        },
+        {
+          "cost": 0.3800633677387838,
+          "optimality": 2.1389370058553375e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000064,
+            "rolling_resistance": 0.0030430374329225235,
+            "cd_area_m2": 0.06825459289139595,
+            "efficiency": 0.9499999999999957
+          }
+        },
+        {
+          "cost": 0.36796054277032925,
+          "optimality": 8.850597288892023e-07,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.92395143422291,
+            "rolling_resistance": 0.0031276546832729726,
+            "cd_area_m2": 0.07028653113259117,
+            "efficiency": 0.8830075150390853
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 1.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 7.689986811384014,
+      "diagnostics": [
+        {
+          "cost": 0.5263106339486058,
+          "optimality": 1.3514522781527764e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029984979408466408,
+            "cd_area_m2": 0.05749536362290551,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.4318628913069146,
+          "optimality": 1.620625061516355e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.002813006144126729,
+            "cd_area_m2": 0.058428559523173405,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.5442003332563827,
+          "optimality": 3.7554020681618934e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0028844376984872066,
+            "cd_area_m2": 0.058250136101891906,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.42960215968268856,
+          "optimality": 8.325322470025871e-07,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 64.66547892797392,
+            "rolling_resistance": 0.0036733571221995703,
+            "cd_area_m2": 0.07220718014392818,
+            "efficiency": 0.9069555284926379
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 1.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 5.472696569363403,
+      "diagnostics": [
+        {
+          "cost": 0.5543927452207702,
+          "optimality": 3.188453791003133e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.003227507458593629,
+            "cd_area_m2": 0.05831600697667053,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.44704124016795377,
+          "optimality": 7.751590116142207e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029839725968230746,
+            "cd_area_m2": 0.0589293396925048,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.5727060469559723,
+          "optimality": 7.262336208428677e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000051,
+            "rolling_resistance": 0.0030620574559437536,
+            "cd_area_m2": 0.05862531553176238,
+            "efficiency": 0.949999999999998
+          }
+        },
+        {
+          "cost": 0.45024601425088184,
+          "optimality": 5.986926145556302e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 67.55408565988802,
+            "rolling_resistance": 0.00377220956331783,
+            "cd_area_m2": 0.07100638529132465,
+            "efficiency": 0.9057745050675329
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.1,
+        "ridge": 0.01,
+        "prior_weight": 0.1
+      },
+      "development_mae_wh": 6.8486428320689505,
+      "diagnostics": [
+        {
+          "cost": 0.3764869105076347,
+          "optimality": 2.4249556497725998e-05,
+          "evaluations": 13,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.94239004577614,
+            "rolling_resistance": 0.002979655117872083,
+            "cd_area_m2": 0.0698405002358774,
+            "efficiency": 0.8680464834368511
+          }
+        },
+        {
+          "cost": 0.30286342829387586,
+          "optimality": 3.378807487043893e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.286012976699,
+            "rolling_resistance": 0.002968381630778749,
+            "cd_area_m2": 0.06981441062894092,
+            "efficiency": 0.8699807069213717
+          }
+        },
+        {
+          "cost": 0.4044617775029728,
+          "optimality": 3.4287564948782233e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.62611416562274,
+            "rolling_resistance": 0.0029728112553899255,
+            "cd_area_m2": 0.06982469722978739,
+            "efficiency": 0.8689897575591826
+          }
+        },
+        {
+          "cost": 0.35074033440931246,
+          "optimality": 8.763521299906438e-07,
+          "evaluations": 5,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.27245850117333,
+            "rolling_resistance": 0.002991874432900045,
+            "cd_area_m2": 0.07018567070131448,
+            "efficiency": 0.8317658783540531
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.05,
+        "physics_weight": 0.1,
+        "ridge": 0.01,
+        "prior_weight": 1.0
+      },
+      "development_mae_wh": 6.787264590535948,
+      "diagnostics": [
+        {
+          "cost": 0.39876675416760404,
+          "optimality": 1.967482188274673e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.3459267501494,
+            "rolling_resistance": 0.002996585532792679,
+            "cd_area_m2": 0.07026165568329085,
+            "efficiency": 0.8272033718826343
+          }
+        },
+        {
+          "cost": 0.3274387694519879,
+          "optimality": 1.5261933273683949e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.25747138731327,
+            "rolling_resistance": 0.0029949100068828475,
+            "cd_area_m2": 0.07025490367278432,
+            "efficiency": 0.827586069931301
+          }
+        },
+        {
+          "cost": 0.42785963545566846,
+          "optimality": 1.4131047809990034e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.30189332162604,
+            "rolling_resistance": 0.0029955233898288735,
+            "cd_area_m2": 0.07025653384297365,
+            "efficiency": 0.8273977101290669
+          }
+        },
+        {
+          "cost": 0.351630495736282,
+          "optimality": 9.232154068258445e-07,
+          "evaluations": 5,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.70545097039275,
+            "rolling_resistance": 0.002998931054072638,
+            "cd_area_m2": 0.07030492153106943,
+            "efficiency": 0.8213195296188048
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.01,
+        "prior_weight": 0.1
+      },
+      "development_mae_wh": 5.963250335706648,
+      "diagnostics": [
+        {
+          "cost": 0.3843805672109672,
+          "optimality": 4.436326393498797e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.02712188500715,
+            "rolling_resistance": 0.0029815242213105005,
+            "cd_area_m2": 0.06984679345054935,
+            "efficiency": 0.8677881846456842
+          }
+        },
+        {
+          "cost": 0.3070878396642965,
+          "optimality": 0.00011692496278137136,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.34361947999581,
+            "rolling_resistance": 0.0029698692393866845,
+            "cd_area_m2": 0.06981609752092138,
+            "efficiency": 0.8698137688111547
+          }
+        },
+        {
+          "cost": 0.4144223220522953,
+          "optimality": 8.20986386788924e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 86.71738950957118,
+            "rolling_resistance": 0.002974385719009469,
+            "cd_area_m2": 0.06982526749502779,
+            "efficiency": 0.8687259598586816
+          }
+        },
+        {
+          "cost": 0.354895036616686,
+          "optimality": 7.572909461050267e-06,
+          "evaluations": 6,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 97.2961499397159,
+            "rolling_resistance": 0.002991263436743086,
+            "cd_area_m2": 0.07017229443790306,
+            "efficiency": 0.8316987653802977
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.01,
+        "prior_weight": 1.0
+      },
+      "development_mae_wh": 5.968275774628272,
+      "diagnostics": [
+        {
+          "cost": 0.4063825853592019,
+          "optimality": 4.681390375859361e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.35646122908547,
+            "rolling_resistance": 0.002996795184949198,
+            "cd_area_m2": 0.07026232668471444,
+            "efficiency": 0.8271580063556181
+          }
+        },
+        {
+          "cost": 0.3314638102019237,
+          "optimality": 8.287591787121745e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.26473652585757,
+            "rolling_resistance": 0.0029950946230859095,
+            "cd_area_m2": 0.07025516122542359,
+            "efficiency": 0.827555299376443
+          }
+        },
+        {
+          "cost": 0.4375137705980081,
+          "optimality": 5.13838407074441e-06,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 98.31346554507451,
+            "rolling_resistance": 0.002995722489561317,
+            "cd_area_m2": 0.0702567875606268,
+            "efficiency": 0.8273489573357985
+          }
+        },
+        {
+          "cost": 0.3557718812459808,
+          "optimality": 1.5701579070995057e-05,
+          "evaluations": 5,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.70799478400099,
+            "rolling_resistance": 0.002998865744440549,
+            "cd_area_m2": 0.07030356965907446,
+            "efficiency": 0.8213113511652672
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.01,
+        "prior_weight": 0.1
+      },
+      "development_mae_wh": 6.1830272826182515,
+      "diagnostics": [
+        {
+          "cost": 0.2660567425248415,
+          "optimality": 2.048089180925472e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.88854137343719,
+            "rolling_resistance": 0.0029987745905688604,
+            "cd_area_m2": 0.07029420194717242,
+            "efficiency": 0.8205437130953178
+          }
+        },
+        {
+          "cost": 0.18893689382970502,
+          "optimality": 2.27273646622359e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.72375630427508,
+            "rolling_resistance": 0.0029929629960066192,
+            "cd_area_m2": 0.07031069046405872,
+            "efficiency": 0.8212275425003932
+          }
+        },
+        {
+          "cost": 0.29293374794375193,
+          "optimality": 4.3258086986981215e-05,
+          "evaluations": 21,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.9093693358353,
+            "rolling_resistance": 0.0029949171646526194,
+            "cd_area_m2": 0.07030965773722705,
+            "efficiency": 0.8204194850735944
+          }
+        },
+        {
+          "cost": 0.3258534173119912,
+          "optimality": 1.2173782085109653e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.84216113374136,
+            "rolling_resistance": 0.0029967337211766094,
+            "cd_area_m2": 0.07028903926632717,
+            "efficiency": 0.8207575053977922
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.01,
+        "prior_weight": 1.0
+      },
+      "development_mae_wh": 6.183079782828507,
+      "diagnostics": [
+        {
+          "cost": 0.2660582877250958,
+          "optimality": 2.0669001648062832e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.9887872135843,
+            "rolling_resistance": 0.0029998759761265623,
+            "cd_area_m2": 0.07031741394550005,
+            "efficiency": 0.820054761737627
+          }
+        },
+        {
+          "cost": 0.18894603229128576,
+          "optimality": 2.434597318213454e-05,
+          "evaluations": 15,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.97217351323455,
+            "rolling_resistance": 0.002999289354963491,
+            "cd_area_m2": 0.07031904347020236,
+            "efficiency": 0.8201241629158311
+          }
+        },
+        {
+          "cost": 0.292934994491038,
+          "optimality": 4.2598676133537316e-05,
+          "evaluations": 21,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.99087819525683,
+            "rolling_resistance": 0.0029994891332401556,
+            "cd_area_m2": 0.07031895351213013,
+            "efficiency": 0.8200422846492055
+          }
+        },
+        {
+          "cost": 0.3258565530299419,
+          "optimality": 1.2135364837640925e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 99.98409820722922,
+            "rolling_resistance": 0.0029996698719252607,
+            "cd_area_m2": 0.07031688396810326,
+            "efficiency": 0.8200764746898025
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 0.3
+      },
+      "development_mae_wh": 5.530181835973409,
+      "diagnostics": [
+        {
+          "cost": 0.34163037572810495,
+          "optimality": 1.970247494710066e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.38143272276763,
+            "rolling_resistance": 0.003397786875726353,
+            "cd_area_m2": 0.07001169240162773,
+            "efficiency": 0.8847807452457832
+          }
+        },
+        {
+          "cost": 0.22971444549560527,
+          "optimality": 2.067545971302584e-05,
+          "evaluations": 12,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 81.05517770384773,
+            "rolling_resistance": 0.003077384915108616,
+            "cd_area_m2": 0.06967156751326745,
+            "efficiency": 0.8838213909964157
+          }
+        },
+        {
+          "cost": 0.3581306831236629,
+          "optimality": 2.972237601599732e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 77.07160448999826,
+            "rolling_resistance": 0.0032198267614526174,
+            "cd_area_m2": 0.07117596195830589,
+            "efficiency": 0.8898034400939565
+          }
+        },
+        {
+          "cost": 0.3735162166222158,
+          "optimality": 3.327798554128591e-05,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.4183615235901,
+            "rolling_resistance": 0.0032947161742945936,
+            "cd_area_m2": 0.07215133668533286,
+            "efficiency": 0.8621028470722881
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.0,
+        "ridge": 1.0
+      },
+      "development_mae_wh": 5.6290785838849855,
+      "diagnostics": [
+        {
+          "cost": 0.41415198914305157,
+          "optimality": 5.511239756878731e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 74.97261389832163,
+            "rolling_resistance": 0.004027885469056118,
+            "cd_area_m2": 0.07128254660037936,
+            "efficiency": 0.893674029439576
+          }
+        },
+        {
+          "cost": 0.2597904926350958,
+          "optimality": 3.578401914873519e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 75.41676151059802,
+            "rolling_resistance": 0.003370769882352825,
+            "cd_area_m2": 0.07026595008295328,
+            "efficiency": 0.8946995210996614
+          }
+        },
+        {
+          "cost": 0.41477553135974216,
+          "optimality": 6.395646182425982e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 67.46266860690454,
+            "rolling_resistance": 0.003789739277388965,
+            "cd_area_m2": 0.07521262494365849,
+            "efficiency": 0.8977849255890687
+          }
+        },
+        {
+          "cost": 0.4149378324820132,
+          "optimality": 3.520638371661e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 88.81413297368672,
+            "rolling_resistance": 0.003909247837506954,
+            "cd_area_m2": 0.07527977990971418,
+            "efficiency": 0.8510600255456033
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.3
+      },
+      "development_mae_wh": 5.356931265808605,
+      "diagnostics": [
+        {
+          "cost": 0.39004165508317723,
+          "optimality": 3.86993531575593e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000002,
+            "rolling_resistance": 0.00334418237020459,
+            "cd_area_m2": 0.06801904883342484,
+            "efficiency": 0.9499999999994899
+          }
+        },
+        {
+          "cost": 0.27829578017888956,
+          "optimality": 2.899206580904781e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0000000000013,
+            "rolling_resistance": 0.003168053016981816,
+            "cd_area_m2": 0.0687809273006534,
+            "efficiency": 0.9499999999999689
+          }
+        },
+        {
+          "cost": 0.40489212452359985,
+          "optimality": 3.7969201619348497e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000284,
+            "rolling_resistance": 0.0032409980153302767,
+            "cd_area_m2": 0.06974573248066852,
+            "efficiency": 0.9499999999999839
+          }
+        },
+        {
+          "cost": 0.38950178977368827,
+          "optimality": 3.697262813842628e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 79.93028736843576,
+            "rolling_resistance": 0.0033894046112542746,
+            "cd_area_m2": 0.07228410674284108,
+            "efficiency": 0.8814899742775835
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 1.0
+      },
+      "development_mae_wh": 5.792281521048184,
+      "diagnostics": [
+        {
+          "cost": 0.45638468861668846,
+          "optimality": 4.463031333799177e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000213581,
+            "rolling_resistance": 0.0039457918670273,
+            "cd_area_m2": 0.06989487615679102,
+            "efficiency": 0.9499999999027839
+          }
+        },
+        {
+          "cost": 0.30877524205609774,
+          "optimality": 3.688978632535641e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0000000026572,
+            "rolling_resistance": 0.003640566300045487,
+            "cd_area_m2": 0.0724349106629091,
+            "efficiency": 0.9499999999988152
+          }
+        },
+        {
+          "cost": 0.4537450764190038,
+          "optimality": 8.015161545582572e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000017,
+            "rolling_resistance": 0.0037915000869555614,
+            "cd_area_m2": 0.07437798474540389,
+            "efficiency": 0.9499999999999891
+          }
+        },
+        {
+          "cost": 0.4288430727925529,
+          "optimality": 2.2900393855176948e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 82.96866455885517,
+            "rolling_resistance": 0.0040442231603219836,
+            "cd_area_m2": 0.07610606675619262,
+            "efficiency": 0.8660314781948069
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.1,
+        "physics_weight": 0.0,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 6.011248596098508,
+      "diagnostics": [
+        {
+          "cost": 0.29441180686773444,
+          "optimality": 3.7166429683113678e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 89.58865314503497,
+            "rolling_resistance": 0.003111549585435508,
+            "cd_area_m2": 0.06975437493590345,
+            "efficiency": 0.86018169839451
+          }
+        },
+        {
+          "cost": 0.20630151854691686,
+          "optimality": 2.9237188325756565e-05,
+          "evaluations": 14,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 88.20800709606935,
+            "rolling_resistance": 0.0029158685908437978,
+            "cd_area_m2": 0.06963554248782025,
+            "efficiency": 0.8646803130062178
+          }
+        },
+        {
+          "cost": 0.31835674322954516,
+          "optimality": 4.5841727956516705e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.72197264018335,
+            "rolling_resistance": 0.002971128128869442,
+            "cd_area_m2": 0.07001449496626562,
+            "efficiency": 0.8654182078151311
+          }
+        },
+        {
+          "cost": 0.3463497116810604,
+          "optimality": 2.6453817501791155e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 91.18940758904968,
+            "rolling_resistance": 0.003051187394271033,
+            "cd_area_m2": 0.07034487506175868,
+            "efficiency": 0.8538250907497089
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.1,
+        "physics_weight": 0.0,
+        "ridge": 0.3
+      },
+      "development_mae_wh": 6.283512480618768,
+      "diagnostics": [
+        {
+          "cost": 0.33288775519117425,
+          "optimality": 2.873215525279289e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 79.01142862684367,
+            "rolling_resistance": 0.0033582783867467927,
+            "cd_area_m2": 0.0699259977677088,
+            "efficiency": 0.8880131239590907
+          }
+        },
+        {
+          "cost": 0.2252184883641812,
+          "optimality": 3.686027688849791e-05,
+          "evaluations": 11,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.19479548329168,
+            "rolling_resistance": 0.0030353118776129608,
+            "cd_area_m2": 0.06958708539932959,
+            "efficiency": 0.8859692898251806
+          }
+        },
+        {
+          "cost": 0.3492092881424531,
+          "optimality": 3.481602262723752e-06,
+          "evaluations": 8,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 75.72332722456648,
+            "rolling_resistance": 0.003182327332173802,
+            "cd_area_m2": 0.07094779444527036,
+            "efficiency": 0.8928944234694373
+          }
+        },
+        {
+          "cost": 0.3704525664242731,
+          "optimality": 3.065794404732763e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 87.11132996190798,
+            "rolling_resistance": 0.0032760291829798094,
+            "cd_area_m2": 0.07167152330596414,
+            "efficiency": 0.8639832698967835
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.1,
+        "physics_weight": 0.1,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 5.996551878832171,
+      "diagnostics": [
+        {
+          "cost": 0.3489522005054588,
+          "optimality": 1.1832542636150238e-06,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000044,
+            "rolling_resistance": 0.003096681169513887,
+            "cd_area_m2": 0.06744770725038245,
+            "efficiency": 0.9499999999999551
+          }
+        },
+        {
+          "cost": 0.25837184732468105,
+          "optimality": 1.344722147002264e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.0029794839712812774,
+            "cd_area_m2": 0.06768216232717683,
+            "efficiency": 0.95
+          }
+        },
+        {
+          "cost": 0.3717126207798389,
+          "optimality": 2.512382878648578e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000001,
+            "rolling_resistance": 0.0030257507617935508,
+            "cd_area_m2": 0.06817540620150347,
+            "efficiency": 0.9499999999999992
+          }
+        },
+        {
+          "cost": 0.36488787818067014,
+          "optimality": 9.572712305968775e-06,
+          "evaluations": 7,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 80.64010069468344,
+            "rolling_resistance": 0.0031315083067020586,
+            "cd_area_m2": 0.07026866154118044,
+            "efficiency": 0.8837146366075233
+          }
+        }
+      ]
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.1,
+        "physics_weight": 0.1,
+        "ridge": 0.3
+      },
+      "development_mae_wh": 6.2000927952324965,
+      "diagnostics": [
+        {
+          "cost": 0.37896916689155413,
+          "optimality": 7.442099294843914e-07,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.000000000000455,
+            "rolling_resistance": 0.003298603715559778,
+            "cd_area_m2": 0.06783235606170678,
+            "efficiency": 0.9499999999999935
+          }
+        },
+        {
+          "cost": 0.27271754234425105,
+          "optimality": 2.2638952333101114e-05,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.00000000000175,
+            "rolling_resistance": 0.0031241174122047253,
+            "cd_area_m2": 0.06862604362890247,
+            "efficiency": 0.9499999999999957
+          }
+        },
+        {
+          "cost": 0.3936770464711531,
+          "optimality": 2.5334311161070988e-08,
+          "evaluations": 10,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 60.0,
+            "rolling_resistance": 0.003194692503514305,
+            "cd_area_m2": 0.0694373290093983,
+            "efficiency": 0.9499999999999998
+          }
+        },
+        {
+          "cost": 0.38562122565338414,
+          "optimality": 3.753204553163766e-05,
+          "evaluations": 9,
+          "converged": true,
+          "physical_parameters": {
+            "total_mass_kg": 79.33454927211851,
+            "rolling_resistance": 0.003364309312403531,
+            "cd_area_m2": 0.07182137628796857,
+            "efficiency": 0.8837377767948078
+          }
+        }
+      ]
+    }
+  ],
+  "extended": [
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.1
+      },
+      "development_mae_wh": 5.346766017785203,
+      "max_nfev": 400
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 0.1,
+        "ridge": 0.3
+      },
+      "development_mae_wh": 5.356931265808605,
+      "max_nfev": 400
+    },
+    {
+      "options": {
+        "kind": "pretrained",
+        "energy_weight": 0.2,
+        "physics_weight": 1.0,
+        "ridge": 0.01
+      },
+      "development_mae_wh": 5.472696569363403,
+      "max_nfev": 400
+    }
+  ],
+  "metrics": {
+    "absolute_error_wh": 8.533995740537536,
+    "signed_error_wh": -7.203514100600844,
+    "absolute_error_pct": 36.03254427153242,
+    "interval_mae_w": 129.3975544463515,
+    "by_track": {
+      "Front Campus": {
+        "absolute_error_wh": 9.42158476060267,
+        "signed_error_wh": -9.42158476060267,
+        "absolute_error_pct": 32.29353919420666
+      },
+      "Indianapolis": {
+        "absolute_error_wh": 1.9957224599050392,
+        "signed_error_wh": 1.9957224599050392,
+        "absolute_error_pct": 4.449688305432778
+      },
+      "Laval": {
+        "absolute_error_wh": 14.184680001104901,
+        "signed_error_wh": -14.184680001104901,
+        "absolute_error_pct": 71.35440531495783
+      }
+    },
+    "runs": [
+      {
+        "track": "Front Campus",
+        "run": "front-campus-2026-08-06-run-03-telemetry",
+        "measured_wh": 29.17482876046261,
+        "predicted_wh": 19.75324399985994,
+        "seconds": 621.945,
+        "signed_error_wh": -9.42158476060267,
+        "absolute_error_wh": 9.42158476060267,
+        "absolute_error_pct": 32.29353919420666
+      },
+      {
+        "track": "Indianapolis",
+        "run": "telemetry_20260411_122713",
+        "measured_wh": 44.85083724782234,
+        "predicted_wh": 46.84655970772738,
+        "seconds": 1989.778,
+        "signed_error_wh": 1.9957224599050392,
+        "absolute_error_wh": 1.9957224599050392,
+        "absolute_error_pct": 4.449688305432778
+      },
+      {
+        "track": "Laval",
+        "run": "2026-09-20-14-00",
+        "measured_wh": 19.879193076438415,
+        "predicted_wh": 5.694513075333514,
+        "seconds": 211.69200000000055,
+        "signed_error_wh": -14.184680001104901,
+        "absolute_error_wh": 14.184680001104901,
+        "absolute_error_pct": 71.35440531495783
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "data/runs/laval/2026-09-19-19-07.csv",
+      "sha256": "41ffda9c7fd261dcfd9586205be211c0765b15bde32c9376f71869f97ab4f5fb",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 8,
+      "seconds": 3.492000000000001,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-19-09.csv",
+      "sha256": "d8565cd0e93f94598e1d708c176e35a54c057ad04cc9ac62f460146a4e9038b0",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 2,
+      "seconds": 0.9329999999999927,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-19-26.csv",
+      "sha256": "9793225e4c4bb8b7b10a67b457ab3d9634f895a945920f01a08b6d5da153754c",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2028,
+      "seconds": 952.2659999999992,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-20-41.csv",
+      "sha256": "aea3c37670451f5f27f80fcb025b429ca55313388a44086822b1088f565cc83f",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 70,
+      "seconds": 32.57099999999953,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-09.csv",
+      "sha256": "f93025bb9f5c9b8d90b0e81b7ab2dd1db75f7054a8260cd68a3529521c6dad54",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 5,
+      "seconds": 2.3870000000000005,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-13.csv",
+      "sha256": "3a72bbfb4ae8dac6fc3225aa3a4de3a071aa5f92a9892649fa7da50d33a7b387",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-28.csv",
+      "sha256": "7accdf0ae280fc0a6a4ef86d520b82b013d17cc6f5966faa09bc86df376309ef",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 71,
+      "seconds": 33.66700000000003,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-33.csv",
+      "sha256": "647d927b7c68aa93d8b072cea4f086088734112cd39402e489e47c9738ce0475",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-22-16.csv",
+      "sha256": "26b158b0d6106501f068fe63c93f79c9cf293da3da6ef2671569564408b47130",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-14-00.csv",
+      "sha256": "f22925701214037bdebcfaf283cd0634af080b84a4aa9368b79e73af19025df9",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 440,
+      "seconds": 211.69200000000055,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-15-36.csv",
+      "sha256": "fee16967966dd4ec08cb9ecff19d203b22d488074bfc4a93ea86eb63a260bad2",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 1,
+      "seconds": 0.4830000000000041,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-15-41.csv",
+      "sha256": "37fcaca19f0a2c71aaf450728dbc49cac05441952b0bc2eb95e360aa1ef36847",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-16-04.csv",
+      "sha256": "eb8f7480d832b94e4a239763e6b751bd7664ac591891fa40bd6a910d56f7f27c",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-16-15.csv",
+      "sha256": "929aa70441c7caf1d27f189f9fb6a82efe680f555b58287dff098e6f3c1be07a",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-02.csv",
+      "sha256": "aab800aea63e2e3e81f77c82e73b9954bcff71af498538fde64673cdc4c4380f",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-11-001.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-11.csv",
+      "sha256": "f8d1139f733cd3ac2145c1dc38340c71ef7ede5486887f866d00d65d55e819d2",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-01/front-campus-2026-08-06-run-01-telemetry.csv",
+      "sha256": "cd7e4f32ed5c61b01a9119fce83bec716c319f5dc62f6bb5330db99dfe02557a",
+      "track": "Front Campus",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2346,
+      "seconds": 712.662,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-02/front-campus-2026-08-06-run-02-telemetry.csv",
+      "sha256": "801bc21f695daed99493e4cde1b4f5723ea5697657872924c708987223191d68",
+      "track": "Front Campus",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 1197,
+      "seconds": 368.898,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-03/front-campus-2026-08-06-run-03-telemetry.csv",
+      "sha256": "6696c97ebe32cc714ae58572d40e2d49d7fe171727166bee9f4031a08fc67840",
+      "track": "Front Campus",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 2004,
+      "seconds": 621.945,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/morning-run/telemetry_20260411_112302.csv",
+      "sha256": "da43ae8e02d1d9b499c8e020b1d9942aa8de0ad0c944eb42aafb308b06a4be9f",
+      "track": "Indianapolis",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2635,
+      "seconds": 1604.25,
+      "gpx_sha256": "c6c5215723240b5a7005b9e6f13a583f2bbbe031d0ec04851d6409722d629bc2"
+    },
+    {
+      "path": "data/runs/afternoon-run/telemetry_20260411_122713.csv",
+      "sha256": "438f1283cfeda4a9928d7211f090741daaef67214c1d0bdcbcf7e174079d11fb",
+      "track": "Indianapolis",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 3269,
+      "seconds": 1989.7780000000002,
+      "gpx_sha256": "d4ead2545927512b144835a4ecc20179b1902f18267bd6a414e668524deebe7a"
+    }
+  ],
+  "prior": {
+    "total_mass_kg": 100.0,
+    "rolling_resistance": 0.003,
+    "cd_area_m2": 0.07032,
+    "efficiency": 0.82
+  },
+  "bounds": {
+    "total_mass_kg": [
+      60.0,
+      140.0
+    ],
+    "rolling_resistance": [
+      0.001,
+      0.01
+    ],
+    "cd_area_m2": [
+      0.04,
+      0.13
+    ],
+    "efficiency": [
+      0.5,
+      0.95
+    ]
+  },
+  "caveats": [
+    "Retrospective benchmark repeatedly inspected in earlier experiments",
+    "Grade is unavailable in the shared replay dataset and is zero",
+    "Physical parameters are regularized effective estimates, not independent measurements",
+    "Current magnitude and recorded voltage define labels, without new sensor calibration"
+  ]
+}

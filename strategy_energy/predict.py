@@ -15,18 +15,24 @@ FEATURES = ["speed_kph", "accel_m_s2"]
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", type=Path)
-    parser.add_argument("--model", choices=["mlp", "finetuned"], default="mlp")
+    parser.add_argument("--model", choices=["mlp", "finetuned", "calibrated"], default="mlp")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     frame = pd.read_csv(args.input)
     if (frame.empty or not set([*FEATURES, "dt_s"]).issubset(frame)
             or not np.isfinite(frame[[*FEATURES, "dt_s"]].to_numpy(dtype=float)).all()
-            or (frame.dt_s <= 0).any()):
+            or (frame.dt_s <= 0).any() or (frame.speed_kph < 0).any()):
         parser.error("Supply finite speed_kph, accel_m_s2 and positive dt_s for each interval.")
+    if "grade_pct" in frame and not np.isfinite(frame.grade_pct).all():
+        parser.error("grade_pct must be finite when supplied.")
     x = frame[FEATURES]
     if args.model == "mlp":
         model = joblib.load(ROOT / "checkpoints/telemetry-only-mlp.joblib")
         watts = np.maximum(model.predict(x), 0)
+    elif args.model == "calibrated":
+        from calibrate_physics import predict
+        model = joblib.load(ROOT / "checkpoints/calibrated-physics.joblib")
+        watts = predict(model, frame)
     else:
         artifact = torch.load(ROOT / "checkpoints/field-finetuned.pt", map_location="cpu", weights_only=True)
         layers = []

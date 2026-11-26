@@ -1,0 +1,477 @@
+{
+  "selected": {
+    "mode": 2,
+    "lr": 0.003,
+    "run_weight": 1.0,
+    "optimizer_steps": 100,
+    "development_mae_wh": 5.2874548443807425
+  },
+  "validation": [
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 18.01672379578601
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 14.514872351751729
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 13.69491607602273
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 15,
+      "development_mae_wh": 14.932441966725301
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 45,
+      "development_mae_wh": 14.416933363872689
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 100,
+      "development_mae_wh": 10.396643510560608
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 12.915764350439337
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 9.047770575564838
+    },
+    {
+      "mode": 1,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 6.774288419209147
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 14.978956942686112
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 15.325497732025177
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 10.935271307781198
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 15,
+      "development_mae_wh": 13.450068581085603
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 45,
+      "development_mae_wh": 13.703146325679546
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 100,
+      "development_mae_wh": 8.976643510933483
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 13.95883324314674
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 8.559544283360575
+    },
+    {
+      "mode": 2,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 5.2874548443807425
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 16.963581146102324
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 12.526564095182259
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 9.988732882591135
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 15,
+      "development_mae_wh": 14.194021390920861
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 45,
+      "development_mae_wh": 11.450569441280615
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 0.2,
+      "optimizer_steps": 100,
+      "development_mae_wh": 8.559310499130945
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 15,
+      "development_mae_wh": 13.26816161312172
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 45,
+      "development_mae_wh": 5.88267216709075
+    },
+    {
+      "mode": 3,
+      "lr": 0.003,
+      "run_weight": 1.0,
+      "optimizer_steps": 100,
+      "development_mae_wh": 7.251385055268109
+    }
+  ],
+  "metrics": {
+    "absolute_error_wh": 10.480684017707013,
+    "signed_error_wh": 2.0226767868526756,
+    "absolute_error_pct": 35.875268108116224,
+    "interval_mae_w": 148.19369393857207,
+    "by_track": {
+      "Front Campus": {
+        "absolute_error_wh": 1.6600777747612447,
+        "signed_error_wh": 1.6600777747612447,
+        "absolute_error_pct": 5.690102891061225
+      },
+      "Indianapolis": {
+        "absolute_error_wh": 17.094963432078288,
+        "signed_error_wh": 17.094963432078288,
+        "absolute_error_pct": 38.11514897173588
+      },
+      "Laval": {
+        "absolute_error_wh": 12.687010846281506,
+        "signed_error_wh": -12.687010846281506,
+        "absolute_error_pct": 63.820552461551564
+      }
+    },
+    "runs": [
+      {
+        "track": "Front Campus",
+        "run": "front-campus-2026-08-06-run-03-telemetry",
+        "measured_wh": 29.17482876046261,
+        "predicted_wh": 30.834906535223855,
+        "seconds": 621.945,
+        "signed_error_wh": 1.6600777747612447,
+        "absolute_error_wh": 1.6600777747612447,
+        "absolute_error_pct": 5.690102891061225
+      },
+      {
+        "track": "Indianapolis",
+        "run": "telemetry_20260411_122713",
+        "measured_wh": 44.85083724782234,
+        "predicted_wh": 61.94580067990063,
+        "seconds": 1989.778,
+        "signed_error_wh": 17.094963432078288,
+        "absolute_error_wh": 17.094963432078288,
+        "absolute_error_pct": 38.11514897173588
+      },
+      {
+        "track": "Laval",
+        "run": "2026-09-20-14-00",
+        "measured_wh": 19.879193076438415,
+        "predicted_wh": 7.19218223015691,
+        "seconds": 211.69200000000055,
+        "signed_error_wh": -12.687010846281506,
+        "absolute_error_wh": 12.687010846281506,
+        "absolute_error_pct": 63.820552461551564
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "data/runs/laval/2026-09-19-19-07.csv",
+      "sha256": "41ffda9c7fd261dcfd9586205be211c0765b15bde32c9376f71869f97ab4f5fb",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 8,
+      "seconds": 3.492000000000001,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-19-09.csv",
+      "sha256": "d8565cd0e93f94598e1d708c176e35a54c057ad04cc9ac62f460146a4e9038b0",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 2,
+      "seconds": 0.9329999999999927,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-19-26.csv",
+      "sha256": "9793225e4c4bb8b7b10a67b457ab3d9634f895a945920f01a08b6d5da153754c",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2028,
+      "seconds": 952.2659999999992,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-20-41.csv",
+      "sha256": "aea3c37670451f5f27f80fcb025b429ca55313388a44086822b1088f565cc83f",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 70,
+      "seconds": 32.57099999999953,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-09.csv",
+      "sha256": "f93025bb9f5c9b8d90b0e81b7ab2dd1db75f7054a8260cd68a3529521c6dad54",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 5,
+      "seconds": 2.3870000000000005,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-13.csv",
+      "sha256": "3a72bbfb4ae8dac6fc3225aa3a4de3a071aa5f92a9892649fa7da50d33a7b387",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-28.csv",
+      "sha256": "7accdf0ae280fc0a6a4ef86d520b82b013d17cc6f5966faa09bc86df376309ef",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 71,
+      "seconds": 33.66700000000003,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-21-33.csv",
+      "sha256": "647d927b7c68aa93d8b072cea4f086088734112cd39402e489e47c9738ce0475",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-19-22-16.csv",
+      "sha256": "26b158b0d6106501f068fe63c93f79c9cf293da3da6ef2671569564408b47130",
+      "track": "Laval",
+      "holdout": false,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-14-00.csv",
+      "sha256": "f22925701214037bdebcfaf283cd0634af080b84a4aa9368b79e73af19025df9",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 440,
+      "seconds": 211.69200000000055,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-15-36.csv",
+      "sha256": "fee16967966dd4ec08cb9ecff19d203b22d488074bfc4a93ea86eb63a260bad2",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 1,
+      "seconds": 0.4830000000000041,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-15-41.csv",
+      "sha256": "37fcaca19f0a2c71aaf450728dbc49cac05441952b0bc2eb95e360aa1ef36847",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-16-04.csv",
+      "sha256": "eb8f7480d832b94e4a239763e6b751bd7664ac591891fa40bd6a910d56f7f27c",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-16-15.csv",
+      "sha256": "929aa70441c7caf1d27f189f9fb6a82efe680f555b58287dff098e6f3c1be07a",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-02.csv",
+      "sha256": "aab800aea63e2e3e81f77c82e73b9954bcff71af498538fde64673cdc4c4380f",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-11-001.csv",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/laval/2026-09-20-17-11.csv",
+      "sha256": "f8d1139f733cd3ac2145c1dc38340c71ef7ede5486887f866d00d65d55e819d2",
+      "track": "Laval",
+      "holdout": true,
+      "accepted": false,
+      "intervals": 0,
+      "seconds": 0.0,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-01/front-campus-2026-08-06-run-01-telemetry.csv",
+      "sha256": "cd7e4f32ed5c61b01a9119fce83bec716c319f5dc62f6bb5330db99dfe02557a",
+      "track": "Front Campus",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2346,
+      "seconds": 712.662,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-02/front-campus-2026-08-06-run-02-telemetry.csv",
+      "sha256": "801bc21f695daed99493e4cde1b4f5723ea5697657872924c708987223191d68",
+      "track": "Front Campus",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 1197,
+      "seconds": 368.898,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/front-campus-2026-08-06-run-03/front-campus-2026-08-06-run-03-telemetry.csv",
+      "sha256": "6696c97ebe32cc714ae58572d40e2d49d7fe171727166bee9f4031a08fc67840",
+      "track": "Front Campus",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 2004,
+      "seconds": 621.945,
+      "gpx_sha256": null
+    },
+    {
+      "path": "data/runs/morning-run/telemetry_20260411_112302.csv",
+      "sha256": "da43ae8e02d1d9b499c8e020b1d9942aa8de0ad0c944eb42aafb308b06a4be9f",
+      "track": "Indianapolis",
+      "holdout": false,
+      "accepted": true,
+      "intervals": 2635,
+      "seconds": 1604.25,
+      "gpx_sha256": "c6c5215723240b5a7005b9e6f13a583f2bbbe031d0ec04851d6409722d629bc2"
+    },
+    {
+      "path": "data/runs/afternoon-run/telemetry_20260411_122713.csv",
+      "sha256": "438f1283cfeda4a9928d7211f090741daaef67214c1d0bdcbcf7e174079d11fb",
+      "track": "Indianapolis",
+      "holdout": true,
+      "accepted": true,
+      "intervals": 3269,
+      "seconds": 1989.7780000000002,
+      "gpx_sha256": "d4ead2545927512b144835a4ecc20179b1902f18267bd6a414e668524deebe7a"
+    }
+  ]
+}
